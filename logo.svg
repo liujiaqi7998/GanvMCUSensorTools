@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="310 390 325 150" width="100%" height="100%">
+  <path fill="none" stroke="#505050" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="M558,416H368.37c-2.63,0-4.98,1.63-5.89,4.09l-33.31,89.43c-1.53,4.11,1.51,8.48,5.89,8.48h94.35c2.74,0,5.16-1.77,5.99-4.38l10-31.43c1.29-4.06-1.74-8.19-5.99-8.19H405"/>
+  
+  <polyline fill="none" stroke="#505050" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="415,445 488,445 465.5,518 504,518 526,447 557,447 536.5,518 577,518 600.71,435.96"/>
+  
+  <circle cx="390.99" cy="475.01" r="11.01" fill="none" stroke="#FF6700" stroke-width="12"/>
+  <circle cx="604.59" cy="421.37" r="11.01" fill="none" stroke="#FF6700" stroke-width="12"/>
+</svg>
