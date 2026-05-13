@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,H as n}from"./DwQMAoyO.js";const r={},o={class:"min-h-screen bg-neutral-50 text-neutral-900"};function a(e,l){return s(),c("div",o,[n(e.$slots,"default")])}const d=t(r,[["render",a]]);export{d as default};
