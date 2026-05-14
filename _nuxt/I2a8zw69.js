@@ -1,1 +1,0 @@
-import{_ as t,o as s,c,H as n}from"./DIad4MW8.js";const r={},o={class:"min-h-screen bg-neutral-50 text-neutral-900"};function a(e,l){return s(),c("div",o,[n(e.$slots,"default")])}const d=t(r,[["render",a]]);export{d as default};
