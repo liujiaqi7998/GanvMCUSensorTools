@@ -1,0 +1,1 @@
+import{_ as t,T as s,j as n,a0 as r}from"./Dz6lq-PS.js";const c={},a={class:"min-h-screen bg-neutral-50 text-neutral-900"};function o(e,l){return s(),n("div",a,[r(e.$slots,"default")])}const d=t(c,[["render",o]]);export{d as default};
