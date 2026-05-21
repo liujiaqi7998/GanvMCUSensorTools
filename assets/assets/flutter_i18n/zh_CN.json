@@ -1,0 +1,311 @@
+{
+  "app": {
+    "title": "感为八路灰度传感器助手",
+    "logoSemantics": "品牌 Logo"
+  },
+  "topBar": {
+    "language": "Language"
+  },
+  "nav": {
+    "overview": "总览",
+    "serial": "串口调试",
+    "realtime": "实时数据",
+    "calibration": "校准",
+    "simulation": "仿真"
+  },
+  "runMode": {
+    "label": "运行模式：{mode}",
+    "normal": "正常模式",
+    "bootloader": "升级模式",
+    "unknown": "--"
+  },
+  "notice": {
+    "initial": "请选择本机串口并连接设备。",
+    "connected": "串口已连接，可以发送请求",
+    "disconnected": "串口已断开",
+    "disconnectedByPeer": "串口连接已关闭",
+    "deviceInfoLoaded": "设备信息已读取",
+    "restartRequested": "已发送重启指令，请等待设备复位",
+    "bootloaderRequested": "已接受进入 Bootloader 请求，设备将重启进入升级模式",
+    "serialAbnormal": "串口异常，已断开连接"
+  },
+  "connection": {
+    "disconnected": "未连接",
+    "connecting": "正在连接",
+    "connected": "串口已连接",
+    "failed": "连接失败",
+    "connectButton": "连接串口",
+    "disconnectButton": "断开连接"
+  },
+  "error": {
+    "device": "设备错误：请检查连接状态或重新查询设备"
+  },
+  "overview": {
+    "title": "总览",
+    "refresh": "刷新",
+    "deviceInfo": {
+      "title": "设备信息",
+      "subtitle": "串口连接后自动读取一次，可手动刷新。"
+    },
+    "softwareVersion": {
+      "title": "软件版本",
+      "description": "当前设备软件版本"
+    },
+    "hardwareVersion": {
+      "title": "硬件版本",
+      "description": "当前设备硬件版本"
+    },
+    "runtime": {
+      "title": "运行时长",
+      "description": "设备本次上电累计运行时间",
+      "seconds": "{seconds} 秒",
+      "minutesSeconds": "{minutes} 分 {seconds} 秒",
+      "hoursMinutesSeconds": "{hours} 小时 {minutes} 分 {seconds} 秒"
+    },
+    "description": {
+      "connectToRead": "连接设备后可读取",
+      "waiting": "等待设备返回"
+    },
+    "deviceActions": {
+      "title": "设备操作",
+      "subtitle": "常用维护操作。",
+      "restart": "重启设备",
+      "firmware": "固件升级"
+    },
+    "restartDialog": {
+      "title": "确认重启设备",
+      "content": "设备将立即重启，连接恢复后请重新连接。",
+      "cancel": "取消",
+      "confirm": "确认执行"
+    }
+  },
+  "serialPortPicker": {
+    "title": "选择串口",
+    "loadFailure": "读取串口列表失败：{error}",
+    "empty": "未发现可用串口",
+    "refresh": "刷新",
+    "cancel": "取消"
+  },
+  "serialConsole": {
+    "title": "串口调试",
+    "log": {
+      "title": "收发日志",
+      "empty": "暂无收发日志"
+    },
+    "commands": {
+      "title": "快速指令",
+      "readSensors": "读取传感器",
+      "restart": "重启",
+      "clearLog": "清空日志",
+      "failure": "指令失败：{error}"
+    },
+    "hex": {
+      "title": "HEX 发送",
+      "hint": "例如：AA 01 00 BB",
+      "help": "支持粘贴 AA01、0xAA,0x01 等格式，会自动整理为空格分隔。",
+      "send": "发送 HEX",
+      "sendFailure": "发送失败：{error}",
+      "invalidCharacters": "HEX 只能包含 0-9、A-F 和常见分隔符",
+      "incompleteByte": "HEX 必须是完整字节（两个字符一组）"
+    }
+  },
+  "debugDashboard": {
+    "title": "实时数据",
+    "connectFirst": "请先连接串口",
+    "polling": {
+      "interval": "轮询间隔",
+      "stop": "停止轮询",
+      "start": "开始轮询"
+    },
+    "digital": {
+      "title": "数字状态",
+      "semantic": "{channel} {state}",
+      "onFull": "开启",
+      "offFull": "关闭",
+      "on": "开",
+      "off": "关"
+    },
+    "analog": {
+      "title": "模拟量",
+      "analog": "模拟量",
+      "normalized": "归一化"
+    },
+    "offset": {
+      "title": "偏移曲线",
+      "empty": "暂无曲线数据"
+    }
+  },
+  "simulation": {
+    "title": "仿真",
+    "connectFirst": "连接设备后再开始仿真",
+    "polling": {
+      "interval": "轮询间隔",
+      "stop": "停止轮询",
+      "start": "开始轮询"
+    },
+    "viewport": {
+      "title": "小车仿真视图",
+      "description": "根据传感器偏移量实时移动小车，拖拽视图可调整观察角度。",
+      "resetView": "复位视角",
+      "rendererDisabled": "3D 渲染在测试环境中未启用",
+      "loadFailure": "3D 模型加载失败：{error}",
+      "loading": "正在加载 3D 模型"
+    },
+    "metrics": {
+      "title": "仿真",
+      "waiting": "等待传感器数据",
+      "rawOffset": "原始偏移量"
+    },
+    "digital": {
+      "title": "数字状态",
+      "semantic": "{channel} {state}",
+      "channelState": "{channel} {state}",
+      "onFull": "开启",
+      "offFull": "关闭",
+      "on": "开",
+      "off": "关"
+    },
+    "bars": {
+      "title": "模拟量",
+      "analog": "模拟量",
+      "normalized": "归一化"
+    }
+  },
+  "calibration": {
+    "title": "校准",
+    "connection": {
+      "ready": "设备已连接并识别",
+      "notReady": "需要先连接并识别设备"
+    },
+    "data": {
+      "title": "数据",
+      "loading": "读取中...",
+      "read": "读取校准数据",
+      "empty": "尚未读取校准数据",
+      "white": "白",
+      "black": "黑"
+    },
+    "wizard": {
+      "title": "传感器校准向导",
+      "previous": "上一步",
+      "steps": {
+        "prepare": {
+          "title": "准备",
+          "description": "请准备白色和黑色校准材料，按顺序完成采集后保存。",
+          "start": "开始校准"
+        },
+        "white": {
+          "title": "采集白色",
+          "description": "放置白色校准材料后开始采集。",
+          "retry": "重试白色采集",
+          "start": "开始白色采集"
+        },
+        "black": {
+          "title": "采集黑色",
+          "description": "放置黑色校准材料后开始采集。",
+          "start": "开始黑色采集",
+          "waiting": "等待白色采集"
+        },
+        "save": {
+          "title": "保存",
+          "description": "确认采集结果无误后保存到 Flash。",
+          "button": "保存到 Flash"
+        },
+        "complete": {
+          "title": "完成",
+          "description": "校准完成",
+          "back": "返回"
+        }
+      }
+    },
+    "confirmSave": {
+      "title": "确认保存校准数据",
+      "content": "保存后将覆盖设备 Flash 中的校准数据。",
+      "cancel": "取消",
+      "confirm": "确认保存"
+    },
+    "imageLoadFailure": "图片加载失败"
+  },
+  "firmware": {
+    "title": "固件升级",
+    "connectFirst": "需要先连接设备",
+    "file": {
+      "title": "固件文件",
+      "subtitle": "选择 .bin 固件包后进入升级模式并开始升级。",
+      "select": "选择固件",
+      "enterUpgradeMode": "进入升级模式",
+      "startUpgrade": "开始升级"
+    },
+    "failure": {
+      "title": "升级失败",
+      "unknown": "未知错误"
+    },
+    "dialog": {
+      "cancel": "取消"
+    },
+    "enterDialog": {
+      "title": "确认进入升级模式",
+      "content": "设备将切换到升级模式并自动断开串口。完成后请重新连接串口，再开始升级。",
+      "confirm": "确认进入"
+    },
+    "completeDialog": {
+      "title": "升级完成",
+      "content": "固件升级已完成，串口已断开。请重新连接串口后继续使用设备。",
+      "ok": "知道了"
+    },
+    "startDialog": {
+      "title": "确认固件升级",
+      "content": "升级过程中不要断开连接或断电。",
+      "confirm": "确认升级"
+    },
+    "info": {
+      "title": "固件信息",
+      "hardwareVersion": "硬件版本 {version}"
+    },
+    "progress": {
+      "title": "升级进度",
+      "currentStage": "当前阶段：{stage}",
+      "stage": {
+        "erase": "擦除",
+        "write": "写入",
+        "verify": "校验",
+        "end": "结束",
+        "complete": "完成"
+      }
+    },
+    "placeholder": "固件升级后续迁移"
+  },
+  "errors": {
+    "serial": {
+      "disconnected": "串口未连接",
+      "unsupported": "当前环境不支持串口连接",
+      "connectionClosed": "串口连接已关闭",
+      "noResponse": "设备无响应"
+    },
+    "device": {
+      "responseTimeout": "设备响应超时"
+    },
+    "firmware": {
+      "normalModeRequired": "仅正常模式可进入升级模式",
+      "selectPackageFirst": "请先选择固件包",
+      "enterUpgradeModeFirst": "请先进入升级模式",
+      "package": {
+        "packageTruncated": "固件包不完整",
+        "packageInvalidMagic": "固件包格式错误",
+        "packageUnsupportedVersion": "固件包版本不支持",
+        "packageInvalidHeaderSize": "固件包头长度错误",
+        "packageHardwareMismatch": "固件包硬件版本不匹配",
+        "packageTargetMismatch": "固件包目标类型不匹配",
+        "packageAppBaseMismatch": "固件包起始地址不匹配",
+        "packageInvalidSize": "固件包大小无效",
+        "packageLengthMismatch": "固件包长度不匹配"
+      },
+      "iap": {
+        "invalidFormat": "固件升级响应格式错误",
+        "chunkTooLarge": "固件数据块过大",
+        "responseFormat": "设备升级响应格式错误",
+        "rejected": "设备拒绝固件升级请求"
+      }
+    }
+  }
+}

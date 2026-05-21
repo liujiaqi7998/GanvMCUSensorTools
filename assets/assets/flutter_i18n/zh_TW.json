@@ -1,0 +1,311 @@
+{
+  "app": {
+    "title": "感為八路灰階感測器助手",
+    "logoSemantics": "品牌 Logo"
+  },
+  "topBar": {
+    "language": "Language"
+  },
+  "nav": {
+    "overview": "總覽",
+    "serial": "序列埠除錯",
+    "realtime": "即時資料",
+    "calibration": "校準",
+    "simulation": "模擬"
+  },
+  "runMode": {
+    "label": "執行模式：{mode}",
+    "normal": "正常模式",
+    "bootloader": "升級模式",
+    "unknown": "--"
+  },
+  "notice": {
+    "initial": "請選擇本機序列埠並連線裝置。",
+    "connected": "序列埠已連線，可以傳送請求",
+    "disconnected": "序列埠已中斷連線",
+    "disconnectedByPeer": "序列埠連線已關閉",
+    "deviceInfoLoaded": "裝置資訊已讀取",
+    "restartRequested": "已傳送重新啟動指令，請等待裝置重置",
+    "bootloaderRequested": "已接受進入 Bootloader 請求，裝置將重新啟動進入升級模式",
+    "serialAbnormal": "序列埠異常，已中斷連線"
+  },
+  "connection": {
+    "disconnected": "未連線",
+    "connecting": "正在連線",
+    "connected": "序列埠已連線",
+    "failed": "連線失敗",
+    "connectButton": "連線序列埠",
+    "disconnectButton": "中斷連線"
+  },
+  "error": {
+    "device": "裝置錯誤：請檢查連線狀態或重新查詢裝置"
+  },
+  "overview": {
+    "title": "總覽",
+    "refresh": "重新整理",
+    "deviceInfo": {
+      "title": "裝置資訊",
+      "subtitle": "序列埠連線後會自動讀取一次，也可以手動重新整理。"
+    },
+    "softwareVersion": {
+      "title": "軟體版本",
+      "description": "目前裝置軟體版本"
+    },
+    "hardwareVersion": {
+      "title": "硬體版本",
+      "description": "目前裝置硬體版本"
+    },
+    "runtime": {
+      "title": "執行時間",
+      "description": "裝置本次上電累計執行時間",
+      "seconds": "{seconds} 秒",
+      "minutesSeconds": "{minutes} 分 {seconds} 秒",
+      "hoursMinutesSeconds": "{hours} 小時 {minutes} 分 {seconds} 秒"
+    },
+    "description": {
+      "connectToRead": "連線裝置後可讀取",
+      "waiting": "等待裝置回應"
+    },
+    "deviceActions": {
+      "title": "裝置操作",
+      "subtitle": "常用維護操作。",
+      "restart": "重新啟動裝置",
+      "firmware": "韌體升級"
+    },
+    "restartDialog": {
+      "title": "確認重新啟動裝置",
+      "content": "裝置將立即重新啟動，連線恢復後請重新連線。",
+      "cancel": "取消",
+      "confirm": "確認執行"
+    }
+  },
+  "serialPortPicker": {
+    "title": "選擇序列埠",
+    "loadFailure": "讀取序列埠清單失敗：{error}",
+    "empty": "找不到可用序列埠",
+    "refresh": "重新整理",
+    "cancel": "取消"
+  },
+  "serialConsole": {
+    "title": "序列埠除錯",
+    "log": {
+      "title": "收發紀錄",
+      "empty": "尚無收發紀錄"
+    },
+    "commands": {
+      "title": "快速指令",
+      "readSensors": "讀取感測器",
+      "restart": "重新啟動",
+      "clearLog": "清除紀錄",
+      "failure": "指令失敗：{error}"
+    },
+    "hex": {
+      "title": "HEX 傳送",
+      "hint": "例如：AA 01 00 BB",
+      "help": "支援貼上 AA01、0xAA,0x01 等格式，會自動整理為空格分隔。",
+      "send": "傳送 HEX",
+      "sendFailure": "傳送失敗：{error}",
+      "invalidCharacters": "HEX 只能包含 0-9、A-F 和常見分隔符號",
+      "incompleteByte": "HEX 必須是完整位元組（兩個字元一組）"
+    }
+  },
+  "debugDashboard": {
+    "title": "即時資料",
+    "connectFirst": "請先連線序列埠",
+    "polling": {
+      "interval": "輪詢間隔",
+      "stop": "停止輪詢",
+      "start": "開始輪詢"
+    },
+    "digital": {
+      "title": "數位狀態",
+      "semantic": "{channel} {state}",
+      "onFull": "開啟",
+      "offFull": "關閉",
+      "on": "開",
+      "off": "關"
+    },
+    "analog": {
+      "title": "類比量",
+      "analog": "類比量",
+      "normalized": "正規化"
+    },
+    "offset": {
+      "title": "偏移曲線",
+      "empty": "尚無曲線資料"
+    }
+  },
+  "simulation": {
+    "title": "模擬",
+    "connectFirst": "連線裝置後再開始模擬",
+    "polling": {
+      "interval": "輪詢間隔",
+      "stop": "停止輪詢",
+      "start": "開始輪詢"
+    },
+    "viewport": {
+      "title": "小車模擬視圖",
+      "description": "依據感測器偏移量即時移動小車，拖曳視圖可調整觀察角度。",
+      "resetView": "重設視角",
+      "rendererDisabled": "測試環境未啟用 3D 渲染",
+      "loadFailure": "3D 模型載入失敗：{error}",
+      "loading": "正在載入 3D 模型"
+    },
+    "metrics": {
+      "title": "模擬",
+      "waiting": "等待感測器資料",
+      "rawOffset": "原始偏移量"
+    },
+    "digital": {
+      "title": "數位狀態",
+      "semantic": "{channel} {state}",
+      "channelState": "{channel} {state}",
+      "onFull": "開啟",
+      "offFull": "關閉",
+      "on": "開",
+      "off": "關"
+    },
+    "bars": {
+      "title": "類比量",
+      "analog": "類比量",
+      "normalized": "正規化"
+    }
+  },
+  "calibration": {
+    "title": "校準",
+    "connection": {
+      "ready": "裝置已連線並識別",
+      "notReady": "需要先連線並識別裝置"
+    },
+    "data": {
+      "title": "資料",
+      "loading": "讀取中...",
+      "read": "讀取校準資料",
+      "empty": "尚未讀取校準資料",
+      "white": "白",
+      "black": "黑"
+    },
+    "wizard": {
+      "title": "感測器校準精靈",
+      "previous": "上一步",
+      "steps": {
+        "prepare": {
+          "title": "準備",
+          "description": "請準備白色和黑色校準材料，依序完成擷取後儲存。",
+          "start": "開始校準"
+        },
+        "white": {
+          "title": "擷取白色",
+          "description": "放置白色校準材料後開始擷取。",
+          "retry": "重試白色擷取",
+          "start": "開始白色擷取"
+        },
+        "black": {
+          "title": "擷取黑色",
+          "description": "放置黑色校準材料後開始擷取。",
+          "start": "開始黑色擷取",
+          "waiting": "等待白色擷取"
+        },
+        "save": {
+          "title": "儲存",
+          "description": "確認擷取結果無誤後儲存到 Flash。",
+          "button": "儲存到 Flash"
+        },
+        "complete": {
+          "title": "完成",
+          "description": "校準完成",
+          "back": "返回"
+        }
+      }
+    },
+    "confirmSave": {
+      "title": "確認儲存校準資料",
+      "content": "儲存後將覆蓋裝置 Flash 中的校準資料。",
+      "cancel": "取消",
+      "confirm": "確認儲存"
+    },
+    "imageLoadFailure": "圖片載入失敗"
+  },
+  "firmware": {
+    "title": "韌體升級",
+    "connectFirst": "需要先連線裝置",
+    "file": {
+      "title": "韌體檔案",
+      "subtitle": "選擇 .bin 韌體包後進入升級模式並開始升級。",
+      "select": "選擇韌體",
+      "enterUpgradeMode": "進入升級模式",
+      "startUpgrade": "開始升級"
+    },
+    "failure": {
+      "title": "升級失敗",
+      "unknown": "未知錯誤"
+    },
+    "dialog": {
+      "cancel": "取消"
+    },
+    "enterDialog": {
+      "title": "確認進入升級模式",
+      "content": "裝置將切換到升級模式並自動中斷序列埠。完成後請重新連線序列埠，再開始升級。",
+      "confirm": "確認進入"
+    },
+    "completeDialog": {
+      "title": "升級完成",
+      "content": "韌體升級已完成，序列埠已中斷連線。請重新連線序列埠後繼續使用裝置。",
+      "ok": "知道了"
+    },
+    "startDialog": {
+      "title": "確認韌體升級",
+      "content": "升級過程中不要中斷連線或斷電。",
+      "confirm": "確認升級"
+    },
+    "info": {
+      "title": "韌體資訊",
+      "hardwareVersion": "硬體版本 {version}"
+    },
+    "progress": {
+      "title": "升級進度",
+      "currentStage": "目前階段：{stage}",
+      "stage": {
+        "erase": "擦除",
+        "write": "寫入",
+        "verify": "校驗",
+        "end": "結束",
+        "complete": "完成"
+      }
+    },
+    "placeholder": "韌體升級後續遷移"
+  },
+  "errors": {
+    "serial": {
+      "disconnected": "序列埠未連線",
+      "unsupported": "目前環境不支援序列埠連線",
+      "connectionClosed": "序列埠連線已關閉",
+      "noResponse": "裝置無回應"
+    },
+    "device": {
+      "responseTimeout": "裝置回應逾時"
+    },
+    "firmware": {
+      "normalModeRequired": "僅正常模式可進入升級模式",
+      "selectPackageFirst": "請先選擇韌體包",
+      "enterUpgradeModeFirst": "請先進入升級模式",
+      "package": {
+        "packageTruncated": "韌體包不完整",
+        "packageInvalidMagic": "韌體包格式錯誤",
+        "packageUnsupportedVersion": "韌體包版本不支援",
+        "packageInvalidHeaderSize": "韌體包標頭長度錯誤",
+        "packageHardwareMismatch": "韌體包硬體版本不相符",
+        "packageTargetMismatch": "韌體包目標類型不相符",
+        "packageAppBaseMismatch": "韌體包起始位址不相符",
+        "packageInvalidSize": "韌體包大小無效",
+        "packageLengthMismatch": "韌體包長度不相符"
+      },
+      "iap": {
+        "invalidFormat": "韌體升級回應格式錯誤",
+        "chunkTooLarge": "韌體資料區塊過大",
+        "responseFormat": "裝置升級回應格式錯誤",
+        "rejected": "裝置拒絕韌體升級請求"
+      }
+    }
+  }
+}

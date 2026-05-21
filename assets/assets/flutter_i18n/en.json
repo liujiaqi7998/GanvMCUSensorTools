@@ -1,0 +1,311 @@
+{
+  "app": {
+    "title": "Ganwei 8-Channel Grayscale Sensor Assistant",
+    "logoSemantics": "Brand logo"
+  },
+  "topBar": {
+    "language": "Language"
+  },
+  "nav": {
+    "overview": "Overview",
+    "serial": "Serial debug",
+    "realtime": "Live data",
+    "calibration": "Calibration",
+    "simulation": "Simulation"
+  },
+  "runMode": {
+    "label": "Run mode: {mode}",
+    "normal": "Normal",
+    "bootloader": "Upgrade",
+    "unknown": "--"
+  },
+  "notice": {
+    "initial": "Select a local serial port and connect the device.",
+    "connected": "Serial port connected. Requests can be sent.",
+    "disconnected": "Serial port disconnected",
+    "disconnectedByPeer": "Serial connection closed",
+    "deviceInfoLoaded": "Device information loaded",
+    "restartRequested": "Restart command sent. Wait for the device to reset.",
+    "bootloaderRequested": "Bootloader request accepted. The device will restart into upgrade mode.",
+    "serialAbnormal": "Serial port error. Connection closed."
+  },
+  "connection": {
+    "disconnected": "Disconnected",
+    "connecting": "Connecting",
+    "connected": "Serial connected",
+    "failed": "Connection failed",
+    "connectButton": "Connect serial",
+    "disconnectButton": "Disconnect"
+  },
+  "error": {
+    "device": "Device error: check the connection or query the device again"
+  },
+  "overview": {
+    "title": "Overview",
+    "refresh": "Refresh",
+    "deviceInfo": {
+      "title": "Device information",
+      "subtitle": "Read automatically after serial connection. You can refresh manually."
+    },
+    "softwareVersion": {
+      "title": "Software version",
+      "description": "Current device software version"
+    },
+    "hardwareVersion": {
+      "title": "Hardware version",
+      "description": "Current device hardware version"
+    },
+    "runtime": {
+      "title": "Runtime",
+      "description": "Accumulated runtime since this power-on",
+      "seconds": "{seconds} s",
+      "minutesSeconds": "{minutes} min {seconds} s",
+      "hoursMinutesSeconds": "{hours} h {minutes} min {seconds} s"
+    },
+    "description": {
+      "connectToRead": "Connect the device to read",
+      "waiting": "Waiting for device response"
+    },
+    "deviceActions": {
+      "title": "Device actions",
+      "subtitle": "Common maintenance actions.",
+      "restart": "Restart device",
+      "firmware": "Firmware upgrade"
+    },
+    "restartDialog": {
+      "title": "Confirm device restart",
+      "content": "The device will restart immediately. Reconnect after the connection recovers.",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  },
+  "serialPortPicker": {
+    "title": "Select serial port",
+    "loadFailure": "Failed to read serial port list: {error}",
+    "empty": "No serial ports found",
+    "refresh": "Refresh",
+    "cancel": "Cancel"
+  },
+  "serialConsole": {
+    "title": "Serial debug",
+    "log": {
+      "title": "TX/RX log",
+      "empty": "No TX/RX logs yet"
+    },
+    "commands": {
+      "title": "Quick commands",
+      "readSensors": "Read sensors",
+      "restart": "Restart",
+      "clearLog": "Clear log",
+      "failure": "Command failed: {error}"
+    },
+    "hex": {
+      "title": "HEX send",
+      "hint": "Example: AA 01 00 BB",
+      "help": "Paste formats such as AA01 or 0xAA,0x01. Input is normalized with spaces automatically.",
+      "send": "Send HEX",
+      "sendFailure": "Send failed: {error}",
+      "invalidCharacters": "HEX can only contain 0-9, A-F, and common separators",
+      "incompleteByte": "HEX must be complete bytes (two characters per byte)"
+    }
+  },
+  "debugDashboard": {
+    "title": "Live data",
+    "connectFirst": "Connect serial first",
+    "polling": {
+      "interval": "Polling interval",
+      "stop": "Stop polling",
+      "start": "Start polling"
+    },
+    "digital": {
+      "title": "Digital state",
+      "semantic": "{channel} {state}",
+      "onFull": "on",
+      "offFull": "off",
+      "on": "On",
+      "off": "Off"
+    },
+    "analog": {
+      "title": "Analog value",
+      "analog": "Analog",
+      "normalized": "Normalized"
+    },
+    "offset": {
+      "title": "Offset curve",
+      "empty": "No chart data yet"
+    }
+  },
+  "simulation": {
+    "title": "Simulation",
+    "connectFirst": "Start simulation after connecting the device",
+    "polling": {
+      "interval": "Polling interval",
+      "stop": "Stop polling",
+      "start": "Start polling"
+    },
+    "viewport": {
+      "title": "Car simulation view",
+      "description": "Move the car in real time based on sensor offset. Drag the view to adjust the camera angle.",
+      "resetView": "Reset view",
+      "rendererDisabled": "3D rendering is disabled in tests",
+      "loadFailure": "Failed to load 3D model: {error}",
+      "loading": "Loading 3D model"
+    },
+    "metrics": {
+      "title": "Simulation",
+      "waiting": "Waiting for sensor data",
+      "rawOffset": "Raw offset"
+    },
+    "digital": {
+      "title": "Digital state",
+      "semantic": "{channel} {state}",
+      "channelState": "{channel} {state}",
+      "onFull": "on",
+      "offFull": "off",
+      "on": "On",
+      "off": "Off"
+    },
+    "bars": {
+      "title": "Analog value",
+      "analog": "Analog",
+      "normalized": "Normalized"
+    }
+  },
+  "calibration": {
+    "title": "Calibration",
+    "connection": {
+      "ready": "Device connected and identified",
+      "notReady": "Connect and identify the device first"
+    },
+    "data": {
+      "title": "Calibration data",
+      "loading": "Reading...",
+      "read": "Read calibration data",
+      "empty": "No calibration data read yet",
+      "white": "White",
+      "black": "Black"
+    },
+    "wizard": {
+      "title": "Sensor calibration wizard",
+      "previous": "Previous",
+      "steps": {
+        "prepare": {
+          "title": "Prepare",
+          "description": "Prepare white and black calibration materials, then capture and save them in order.",
+          "start": "Start calibration"
+        },
+        "white": {
+          "title": "Capture white",
+          "description": "Place the white calibration material, then start capture.",
+          "retry": "Retry white capture",
+          "start": "Start white capture"
+        },
+        "black": {
+          "title": "Capture black",
+          "description": "Place the black calibration material, then start capture.",
+          "start": "Start black capture",
+          "waiting": "Waiting for white capture"
+        },
+        "save": {
+          "title": "Save",
+          "description": "Confirm the captured result, then save it to Flash.",
+          "button": "Save to Flash"
+        },
+        "complete": {
+          "title": "Complete",
+          "description": "Calibration complete",
+          "back": "Back"
+        }
+      }
+    },
+    "confirmSave": {
+      "title": "Save calibration data?",
+      "content": "Saving will overwrite calibration data in device Flash.",
+      "cancel": "Cancel",
+      "confirm": "Save"
+    },
+    "imageLoadFailure": "Failed to load image"
+  },
+  "firmware": {
+    "title": "Firmware upgrade",
+    "connectFirst": "Connect the device first",
+    "file": {
+      "title": "Firmware file",
+      "subtitle": "Select a .bin firmware package, enter upgrade mode, then start upgrading.",
+      "select": "Select firmware",
+      "enterUpgradeMode": "Enter upgrade mode",
+      "startUpgrade": "Start upgrade"
+    },
+    "failure": {
+      "title": "Upgrade failed",
+      "unknown": "Unknown error"
+    },
+    "dialog": {
+      "cancel": "Cancel"
+    },
+    "enterDialog": {
+      "title": "Enter upgrade mode?",
+      "content": "The device will switch to upgrade mode and disconnect serial automatically. Reconnect serial after it finishes, then start upgrading.",
+      "confirm": "Enter"
+    },
+    "completeDialog": {
+      "title": "Upgrade complete",
+      "content": "Firmware upgrade is complete and serial has disconnected. Reconnect serial to continue using the device.",
+      "ok": "OK"
+    },
+    "startDialog": {
+      "title": "Confirm firmware upgrade",
+      "content": "Do not disconnect or power off during upgrade.",
+      "confirm": "Upgrade"
+    },
+    "info": {
+      "title": "Firmware information",
+      "hardwareVersion": "Hardware version {version}"
+    },
+    "progress": {
+      "title": "Upgrade progress",
+      "currentStage": "Current stage: {stage}",
+      "stage": {
+        "erase": "Erase",
+        "write": "Write",
+        "verify": "Verify",
+        "end": "End",
+        "complete": "Complete"
+      }
+    },
+    "placeholder": "Firmware upgrade migration pending"
+  },
+  "errors": {
+    "serial": {
+      "disconnected": "Serial port is not connected",
+      "unsupported": "Serial connection is not supported in this environment",
+      "connectionClosed": "Serial connection closed",
+      "noResponse": "Device did not respond"
+    },
+    "device": {
+      "responseTimeout": "Device response timed out"
+    },
+    "firmware": {
+      "normalModeRequired": "Only normal mode can enter upgrade mode",
+      "selectPackageFirst": "Select a firmware package first",
+      "enterUpgradeModeFirst": "Enter upgrade mode first",
+      "package": {
+        "packageTruncated": "Firmware package is incomplete",
+        "packageInvalidMagic": "Firmware package format is invalid",
+        "packageUnsupportedVersion": "Firmware package version is unsupported",
+        "packageInvalidHeaderSize": "Firmware package header length is invalid",
+        "packageHardwareMismatch": "Firmware package hardware version does not match",
+        "packageTargetMismatch": "Firmware package target type does not match",
+        "packageAppBaseMismatch": "Firmware package start address does not match",
+        "packageInvalidSize": "Firmware package size is invalid",
+        "packageLengthMismatch": "Firmware package length does not match"
+      },
+      "iap": {
+        "invalidFormat": "Firmware upgrade response format is invalid",
+        "chunkTooLarge": "Firmware data chunk is too large",
+        "responseFormat": "Device upgrade response format is invalid",
+        "rejected": "Device rejected the firmware upgrade request"
+      }
+    }
+  }
+}
