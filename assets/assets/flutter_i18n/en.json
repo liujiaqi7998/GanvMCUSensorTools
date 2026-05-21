@@ -20,14 +20,14 @@
     "unknown": "--"
   },
   "notice": {
-    "initial": "Select a local serial port and connect the device.",
-    "connected": "Serial port connected. Requests can be sent.",
-    "disconnected": "Serial port disconnected",
-    "disconnectedByPeer": "Serial connection closed",
+    "initial": "Connect serial to start reading",
+    "connected": "Connected. Ready to read.",
+    "disconnected": "Serial disconnected",
+    "disconnectedByPeer": "Device disconnected",
     "deviceInfoLoaded": "Device information loaded",
-    "restartRequested": "Restart command sent. Wait for the device to reset.",
-    "bootloaderRequested": "Bootloader request accepted. The device will restart into upgrade mode.",
-    "serialAbnormal": "Serial port error. Connection closed."
+    "restartRequested": "Restart sent. Wait for reset.",
+    "bootloaderRequested": "Device will restart into upgrade mode.",
+    "serialAbnormal": "Serial error. Disconnected."
   },
   "connection": {
     "disconnected": "Disconnected",
@@ -42,10 +42,11 @@
   },
   "overview": {
     "title": "Overview",
+    "subtitle": "Connect the device to view versions, runtime, and maintenance actions.",
     "refresh": "Refresh",
     "deviceInfo": {
       "title": "Device information",
-      "subtitle": "Read automatically after serial connection. You can refresh manually."
+      "subtitle": "Read automatically after connection. You can refresh manually."
     },
     "softwareVersion": {
       "title": "Software version",
@@ -63,12 +64,12 @@
       "hoursMinutesSeconds": "{hours} h {minutes} min {seconds} s"
     },
     "description": {
-      "connectToRead": "Connect the device to read",
-      "waiting": "Waiting for device response"
+      "connectToRead": "Connect to read",
+      "waiting": "Waiting"
     },
     "deviceActions": {
-      "title": "Device actions",
-      "subtitle": "Common maintenance actions.",
+      "title": "Maintenance",
+      "subtitle": "Restart and upgrade are maintenance actions. Confirm the device is safe before continuing.",
       "restart": "Restart device",
       "firmware": "Firmware upgrade"
     },
@@ -111,7 +112,8 @@
   },
   "debugDashboard": {
     "title": "Live data",
-    "connectFirst": "Connect serial first",
+    "subtitle": "Watch digital state, analog values, and offset trend across 8 channels.",
+    "connectFirst": "Connect serial to show live data",
     "polling": {
       "interval": "Polling interval",
       "stop": "Stop polling",
@@ -128,24 +130,26 @@
     "analog": {
       "title": "Analog value",
       "analog": "Analog",
-      "normalized": "Normalized"
+      "normalized": "Normalized",
+      "value": "Value"
     },
     "offset": {
-      "title": "Offset curve",
-      "empty": "No chart data yet"
+      "title": "Offset trend",
+      "empty": "Start polling to show the trend"
     }
   },
   "simulation": {
     "title": "Simulation",
-    "connectFirst": "Start simulation after connecting the device",
+    "subtitle": "Use offset to watch how the car moves relative to the line.",
+    "connectFirst": "Connect the device to start simulation",
     "polling": {
       "interval": "Polling interval",
       "stop": "Stop polling",
       "start": "Start polling"
     },
     "viewport": {
-      "title": "Car simulation view",
-      "description": "Move the car in real time based on sensor offset. Drag the view to adjust the camera angle.",
+      "title": "Car pose",
+      "description": "Offset drives the car position in real time. Drag to adjust the view.",
       "resetView": "Reset view",
       "rendererDisabled": "3D rendering is disabled in tests",
       "loadFailure": "Failed to load 3D model: {error}",
@@ -168,20 +172,22 @@
     "bars": {
       "title": "Analog value",
       "analog": "Analog",
-      "normalized": "Normalized"
+      "normalized": "Normalized",
+      "value": "Value"
     }
   },
   "calibration": {
     "title": "Calibration",
     "connection": {
-      "ready": "Device connected and identified",
-      "notReady": "Connect and identify the device first"
+      "ready": "Device ready for calibration",
+      "notReady": "Connect and identify the device to calibrate"
     },
     "data": {
       "title": "Calibration data",
       "loading": "Reading...",
       "read": "Read calibration data",
       "empty": "No calibration data read yet",
+      "channel": "Channel",
       "white": "White",
       "black": "Black"
     },

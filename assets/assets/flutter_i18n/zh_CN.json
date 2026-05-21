@@ -20,14 +20,14 @@
     "unknown": "--"
   },
   "notice": {
-    "initial": "请选择本机串口并连接设备。",
-    "connected": "串口已连接，可以发送请求",
+    "initial": "连接串口后开始读取设备",
+    "connected": "已连接，可读取设备",
     "disconnected": "串口已断开",
-    "disconnectedByPeer": "串口连接已关闭",
+    "disconnectedByPeer": "设备已断开连接",
     "deviceInfoLoaded": "设备信息已读取",
-    "restartRequested": "已发送重启指令，请等待设备复位",
-    "bootloaderRequested": "已接受进入 Bootloader 请求，设备将重启进入升级模式",
-    "serialAbnormal": "串口异常，已断开连接"
+    "restartRequested": "重启指令已发送，等待设备复位",
+    "bootloaderRequested": "设备将重启进入升级模式",
+    "serialAbnormal": "串口异常，已断开"
   },
   "connection": {
     "disconnected": "未连接",
@@ -42,10 +42,11 @@
   },
   "overview": {
     "title": "总览",
+    "subtitle": "连接设备后查看版本、运行时长和维护操作。",
     "refresh": "刷新",
     "deviceInfo": {
       "title": "设备信息",
-      "subtitle": "串口连接后自动读取一次，可手动刷新。"
+      "subtitle": "连接后自动读取，也可手动刷新。"
     },
     "softwareVersion": {
       "title": "软件版本",
@@ -63,12 +64,12 @@
       "hoursMinutesSeconds": "{hours} 小时 {minutes} 分 {seconds} 秒"
     },
     "description": {
-      "connectToRead": "连接设备后可读取",
-      "waiting": "等待设备返回"
+      "connectToRead": "连接后读取",
+      "waiting": "等待设备"
     },
     "deviceActions": {
-      "title": "设备操作",
-      "subtitle": "常用维护操作。",
+      "title": "维护操作",
+      "subtitle": "重启和升级属于设备维护，请在确认现场安全后执行。",
       "restart": "重启设备",
       "firmware": "固件升级"
     },
@@ -111,7 +112,8 @@
   },
   "debugDashboard": {
     "title": "实时数据",
-    "connectFirst": "请先连接串口",
+    "subtitle": "观察 8 路传感器的数字状态、模拟量和偏移趋势。",
+    "connectFirst": "连接串口后显示实时数据",
     "polling": {
       "interval": "轮询间隔",
       "stop": "停止轮询",
@@ -128,24 +130,26 @@
     "analog": {
       "title": "模拟量",
       "analog": "模拟量",
-      "normalized": "归一化"
+      "normalized": "归一化",
+      "value": "数值"
     },
     "offset": {
-      "title": "偏移曲线",
-      "empty": "暂无曲线数据"
+      "title": "偏移趋势",
+      "empty": "开始轮询后显示趋势"
     }
   },
   "simulation": {
     "title": "仿真",
-    "connectFirst": "连接设备后再开始仿真",
+    "subtitle": "用偏移量观察小车相对轨迹的位置变化。",
+    "connectFirst": "连接设备后开始仿真",
     "polling": {
       "interval": "轮询间隔",
       "stop": "停止轮询",
       "start": "开始轮询"
     },
     "viewport": {
-      "title": "小车仿真视图",
-      "description": "根据传感器偏移量实时移动小车，拖拽视图可调整观察角度。",
+      "title": "小车姿态",
+      "description": "偏移量会实时驱动车辆位置，拖拽可调整视角。",
       "resetView": "复位视角",
       "rendererDisabled": "3D 渲染在测试环境中未启用",
       "loadFailure": "3D 模型加载失败：{error}",
@@ -168,20 +172,22 @@
     "bars": {
       "title": "模拟量",
       "analog": "模拟量",
-      "normalized": "归一化"
+      "normalized": "归一化",
+      "value": "数值"
     }
   },
   "calibration": {
     "title": "校准",
     "connection": {
-      "ready": "设备已连接并识别",
-      "notReady": "需要先连接并识别设备"
+      "ready": "设备已就绪，可以校准",
+      "notReady": "连接并识别设备后可校准"
     },
     "data": {
       "title": "数据",
       "loading": "读取中...",
       "read": "读取校准数据",
       "empty": "尚未读取校准数据",
+      "channel": "通道",
       "white": "白",
       "black": "黑"
     },
