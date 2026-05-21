@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Ganwei 8-Channel Grayscale Sensor Assistant",
+    "title": "GanvMCUSensorTools",
     "logoSemantics": "Brand logo"
   },
   "topBar": {
@@ -313,5 +313,8 @@
         "rejected": "Device rejected the firmware upgrade request"
       }
     }
+  },
+  "bootloaderLock": {
+    "navigationDisabled": "Only firmware upgrade is available in upgrade mode"
   }
 }

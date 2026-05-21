@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Ganwei 8チャンネルグレースケールセンサーアシスタント",
+    "title": "Ganv 8チャンネルカラーコントラストセンサーアシスタント",
     "logoSemantics": "ブランドロゴ"
   },
   "topBar": {
@@ -307,5 +307,8 @@
         "rejected": "デバイスがファームウェア更新リクエストを拒否しました"
       }
     }
+  },
+  "bootloaderLock": {
+    "navigationDisabled": "アップグレードモードではファームウェア更新のみ使用できます"
   }
 }

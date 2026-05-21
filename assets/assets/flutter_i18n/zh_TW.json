@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "感為八路灰階感測器助手",
+    "title": "感為八路顏色對比感測器助手",
     "logoSemantics": "品牌 Logo"
   },
   "topBar": {
@@ -307,5 +307,8 @@
         "rejected": "裝置拒絕韌體升級請求"
       }
     }
+  },
+  "bootloaderLock": {
+    "navigationDisabled": "升級模式下僅可進行韌體升級"
   }
 }

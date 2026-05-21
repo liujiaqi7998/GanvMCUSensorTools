@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "感为八路灰度传感器助手",
+    "title": "感为八路颜色对比传感器助手",
     "logoSemantics": "品牌 Logo"
   },
   "topBar": {
@@ -313,5 +313,8 @@
         "rejected": "设备拒绝固件升级请求"
       }
     }
+  },
+  "bootloaderLock": {
+    "navigationDisabled": "升级模式下仅可进行固件升级"
   }
 }
