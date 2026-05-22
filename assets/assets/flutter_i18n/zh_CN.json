@@ -11,7 +11,8 @@
     "serial": "串口调试",
     "realtime": "实时数据",
     "calibration": "校准",
-    "simulation": "仿真"
+    "simulation": "仿真",
+    "about": "关于"
   },
   "runMode": {
     "label": "运行模式：{mode}",
@@ -316,5 +317,22 @@
   },
   "bootloaderLock": {
     "navigationDisabled": "升级模式下仅可进行固件升级"
+  },
+  "about": {
+    "title": "关于",
+    "subtitle": "查看软件标识、版本、公司与法律信息。",
+    "versionValue": "软件版本 {version}",
+    "details": {
+      "title": "产品信息"
+    },
+    "company": "公司",
+    "website": "官网",
+    "developer": "软件开发者",
+    "openLink": "打开链接",
+    "legal": {
+      "title": "版权声明与法律信息",
+      "subtitle": "适用于本软件的分发、使用与维护。",
+      "content": "版权所有 © {year} 感为科技有限公司。保留所有权利。本软件受著作权和相关法律保护。未经授权不得复制、分发、修改或用于商业用途。"
+    }
   }
 }

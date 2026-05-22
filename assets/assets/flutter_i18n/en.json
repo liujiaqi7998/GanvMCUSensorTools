@@ -11,7 +11,8 @@
     "serial": "Serial debug",
     "realtime": "Live data",
     "calibration": "Calibration",
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "about": "About"
   },
   "runMode": {
     "label": "Run mode: {mode}",
@@ -316,5 +317,22 @@
   },
   "bootloaderLock": {
     "navigationDisabled": "Only firmware upgrade is available in upgrade mode"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Software identity, version, company and legal information.",
+    "versionValue": "Version {version}",
+    "details": {
+      "title": "Product information"
+    },
+    "company": "Company",
+    "website": "Website",
+    "developer": "Software developer",
+    "openLink": "Open link",
+    "legal": {
+      "title": "Copyright and legal information",
+      "subtitle": "For software distribution and use.",
+      "content": "Copyright © {year} Ganv Technology Co., Ltd. All rights reserved. This software and its related materials are protected by copyright and applicable laws. Unauthorized copying, distribution, modification, reverse engineering or commercial reuse is prohibited unless permitted by the rights holder or applicable law."
+    }
   }
 }
