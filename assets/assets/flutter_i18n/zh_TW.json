@@ -192,20 +192,20 @@
       "steps": {
         "prepare": {
           "title": "準備",
-          "description": "請準備白色和黑色校準材料，依序完成擷取後儲存。",
+          "description": "請準備底色和线色校準材料，依序完成擷取後儲存。",
           "start": "開始校準"
         },
         "white": {
-          "title": "擷取白色",
-          "description": "放置白色校準材料後開始擷取。",
-          "retry": "重試白色擷取",
-          "start": "開始白色擷取"
+          "title": "擷取底色",
+          "description": "放置底色校準材料後開始擷取。",
+          "retry": "重試底色擷取",
+          "start": "開始底色擷取"
         },
         "black": {
-          "title": "擷取黑色",
-          "description": "放置黑色校準材料後開始擷取。",
-          "start": "開始黑色擷取",
-          "waiting": "等待白色擷取"
+          "title": "擷取线色",
+          "description": "放置线色校準材料後開始擷取。",
+          "start": "開始线色擷取",
+          "waiting": "等待底色擷取"
         },
         "save": {
           "title": "儲存",

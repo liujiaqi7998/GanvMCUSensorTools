@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "感为八路颜色对比传感器助手",
+    "title": "感为灰度传感器调试助手",
     "logoSemantics": "品牌 Logo"
   },
   "topBar": {
@@ -198,20 +198,20 @@
       "steps": {
         "prepare": {
           "title": "准备",
-          "description": "请准备白色和黑色校准材料，按顺序完成采集后保存。",
+          "description": "请将传感器固定到20mm-30mm高度，准备好校准材料，点击开始校准进入校准步骤。",
           "start": "开始校准"
         },
         "white": {
-          "title": "采集白色",
-          "description": "放置白色校准材料后开始采集。",
-          "retry": "重试白色采集",
-          "start": "开始白色采集"
+          "title": "采集底色",
+          "description": "放置底色下，点击开始采集",
+          "retry": "重试底色采集",
+          "start": "开始底色采集"
         },
         "black": {
-          "title": "采集黑色",
-          "description": "放置黑色校准材料后开始采集。",
-          "start": "开始黑色采集",
-          "waiting": "等待白色采集"
+          "title": "采集线色",
+          "description": "放置线色下，点击开始采集",
+          "start": "开始线色采集",
+          "waiting": "等待底色采集"
         },
         "save": {
           "title": "保存",
