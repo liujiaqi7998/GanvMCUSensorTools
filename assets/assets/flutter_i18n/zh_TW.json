@@ -197,8 +197,8 @@
       "previous": "上一步",
       "boardType": {
         "label": "電路板類型",
-        "straight": "直板",
-        "curved": "彎板"
+        "straight": "直型板",
+        "curved": "弓型板"
       },
       "steps": {
         "prepare": {
