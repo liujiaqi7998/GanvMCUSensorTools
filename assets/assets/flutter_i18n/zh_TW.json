@@ -134,6 +134,12 @@
     "offset": {
       "title": "偏移曲線",
       "empty": "尚無曲線資料"
+    },
+    "serialDoc": {
+      "button": "串口通訊說明",
+      "title": "串口通訊說明",
+      "close": "關閉",
+      "loadFailure": "串口通訊說明載入失敗"
     }
   },
   "simulation": {
@@ -189,6 +195,11 @@
     "wizard": {
       "title": "感測器校準精靈",
       "previous": "上一步",
+      "boardType": {
+        "label": "電路板類型",
+        "straight": "直板",
+        "curved": "彎板"
+      },
       "steps": {
         "prepare": {
           "title": "準備",
@@ -206,6 +217,16 @@
           "description": "放置线色校準材料後開始擷取。",
           "start": "開始线色擷取",
           "waiting": "等待底色擷取"
+        },
+        "blackFirstHalf": {
+          "title": "採集線色左4路",
+          "description": "放置線色校準材料後開始採集左4路。",
+          "start": "開始線色左4路採集"
+        },
+        "blackSecondHalf": {
+          "title": "採集線色右4路",
+          "description": "放置線色校準材料後開始採集右4路。",
+          "start": "開始線色右4路採集"
         },
         "save": {
           "title": "儲存",

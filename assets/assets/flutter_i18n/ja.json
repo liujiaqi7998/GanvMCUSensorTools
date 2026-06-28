@@ -134,6 +134,12 @@
     "offset": {
       "title": "オフセット曲線",
       "empty": "曲線データはまだありません"
+    },
+    "serialDoc": {
+      "button": "シリアル通信説明",
+      "title": "シリアル通信説明",
+      "close": "閉じる",
+      "loadFailure": "シリアル通信説明の読み込みに失敗しました"
     }
   },
   "simulation": {
@@ -189,6 +195,11 @@
     "wizard": {
       "title": "センサーキャリブレーションウィザード",
       "previous": "前へ",
+      "boardType": {
+        "label": "基板タイプ",
+        "straight": "直線型",
+        "curved": "曲線型"
+      },
       "steps": {
         "prepare": {
           "title": "準備",
@@ -206,6 +217,16 @@
           "description": "黒色キャリブレーション材料を置いてからキャプチャを開始します。",
           "start": "黒キャプチャ開始",
           "waiting": "白キャプチャ待ち"
+        },
+        "blackFirstHalf": {
+          "title": "ライン色 CH1-CH4 を取得",
+          "description": "ライン色キャリブレーション材料を置いてから CH1-CH4 を取得します。",
+          "start": "ライン色 CH1-CH4 取得開始"
+        },
+        "blackSecondHalf": {
+          "title": "ライン色 CH5-CH8 を取得",
+          "description": "ライン色キャリブレーション材料を置いてから CH5-CH8 を取得します。",
+          "start": "ライン色 CH5-CH8 取得開始"
         },
         "save": {
           "title": "保存",

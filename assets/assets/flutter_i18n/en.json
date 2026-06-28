@@ -137,6 +137,12 @@
     "offset": {
       "title": "Offset trend",
       "empty": "Start polling to show the trend"
+    },
+    "serialDoc": {
+      "button": "Serial communication guide",
+      "title": "Serial communication guide",
+      "close": "Close",
+      "loadFailure": "Failed to load the serial communication guide"
     }
   },
   "simulation": {
@@ -195,6 +201,11 @@
     "wizard": {
       "title": "Sensor calibration wizard",
       "previous": "Previous",
+      "boardType": {
+        "label": "Board type",
+        "straight": "Straight board",
+        "curved": "Curved board"
+      },
       "steps": {
         "prepare": {
           "title": "Prepare",
@@ -212,6 +223,16 @@
           "description": "Place the black calibration material, then start capture.",
           "start": "Start black capture",
           "waiting": "Waiting for white capture"
+        },
+        "blackFirstHalf": {
+          "title": "Capture line color CH1-CH4",
+          "description": "Place the line color calibration material, then capture CH1-CH4.",
+          "start": "Start line color CH1-CH4 capture"
+        },
+        "blackSecondHalf": {
+          "title": "Capture line color CH5-CH8",
+          "description": "Place the line color calibration material, then capture CH5-CH8.",
+          "start": "Start line color CH5-CH8 capture"
         },
         "save": {
           "title": "Save",

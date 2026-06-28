@@ -137,6 +137,12 @@
     "offset": {
       "title": "偏移趋势",
       "empty": "开始轮询后显示趋势"
+    },
+    "serialDoc": {
+      "button": "串口通讯说明",
+      "title": "串口通讯说明",
+      "close": "关闭",
+      "loadFailure": "串口通讯说明加载失败"
     }
   },
   "simulation": {
@@ -195,6 +201,11 @@
     "wizard": {
       "title": "传感器校准向导",
       "previous": "上一步",
+      "boardType": {
+        "label": "电路板类型",
+        "straight": "直板",
+        "curved": "弯板"
+      },
       "steps": {
         "prepare": {
           "title": "准备",
@@ -212,6 +223,16 @@
           "description": "放置线色下，点击开始采集",
           "start": "开始线色采集",
           "waiting": "等待底色采集"
+        },
+        "blackFirstHalf": {
+          "title": "采集线色左4路",
+          "description": "放置线色下，点击开始采集左4路。",
+          "start": "开始线色左4路采集"
+        },
+        "blackSecondHalf": {
+          "title": "采集线色右4路",
+          "description": "放置线色下，点击开始采集右4路。",
+          "start": "开始线色右4路采集"
         },
         "save": {
           "title": "保存",
