@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "感為八路顏色對比感測器助手",
+    "title": "感為灰階感測器除錯助手",
     "logoSemantics": "品牌 Logo"
   },
   "topBar": {
@@ -12,7 +12,7 @@
     "realtime": "即時資料",
     "calibration": "校準",
     "simulation": "模擬",
-    "about": "关于"
+    "about": "關於"
   },
   "runMode": {
     "label": "執行模式：{mode}",
@@ -21,13 +21,13 @@
     "unknown": "--"
   },
   "notice": {
-    "initial": "請選擇本機序列埠並連線裝置。",
-    "connected": "序列埠已連線，可以傳送請求",
+    "initial": "連線序列埠後開始讀取裝置",
+    "connected": "已連線，可讀取裝置",
     "disconnected": "序列埠已中斷連線",
-    "disconnectedByPeer": "序列埠連線已關閉",
+    "disconnectedByPeer": "裝置已中斷連線",
     "deviceInfoLoaded": "裝置資訊已讀取",
-    "restartRequested": "已傳送重新啟動指令，請等待裝置重置",
-    "bootloaderRequested": "已接受進入 Bootloader 請求，裝置將重新啟動進入升級模式",
+    "restartRequested": "重新啟動指令已傳送，等待裝置重置",
+    "bootloaderRequested": "裝置將重新啟動進入升級模式",
     "serialAbnormal": "序列埠異常，已中斷連線"
   },
   "connection": {
@@ -43,10 +43,11 @@
   },
   "overview": {
     "title": "總覽",
+    "subtitle": "連線裝置後查看版本、執行時間和維護操作。",
     "refresh": "重新整理",
     "deviceInfo": {
       "title": "裝置資訊",
-      "subtitle": "序列埠連線後會自動讀取一次，也可以手動重新整理。"
+      "subtitle": "連線後自動讀取，也可手動重新整理。"
     },
     "softwareVersion": {
       "title": "軟體版本",
@@ -64,12 +65,12 @@
       "hoursMinutesSeconds": "{hours} 小時 {minutes} 分 {seconds} 秒"
     },
     "description": {
-      "connectToRead": "連線裝置後可讀取",
-      "waiting": "等待裝置回應"
+      "connectToRead": "連線後讀取",
+      "waiting": "等待裝置"
     },
     "deviceActions": {
-      "title": "裝置操作",
-      "subtitle": "常用維護操作。",
+      "title": "維護操作",
+      "subtitle": "重新啟動和升級屬於裝置維護，請確認現場安全後再執行。",
       "restart": "重新啟動裝置",
       "firmware": "韌體升級"
     },
@@ -112,7 +113,8 @@
   },
   "debugDashboard": {
     "title": "即時資料",
-    "connectFirst": "請先連線序列埠",
+    "subtitle": "觀察 8 路感測器的數位狀態、類比量和偏移趨勢。",
+    "connectFirst": "連線序列埠後顯示即時資料",
     "polling": {
       "interval": "輪詢間隔",
       "stop": "停止輪詢",
@@ -129,32 +131,34 @@
     "analog": {
       "title": "類比量",
       "analog": "類比量",
-      "normalized": "正規化"
+      "normalized": "正規化",
+      "value": "數值"
     },
     "offset": {
-      "title": "偏移曲線",
-      "empty": "尚無曲線資料"
+      "title": "偏移趨勢",
+      "empty": "開始輪詢後顯示趨勢"
     },
     "serialDoc": {
-      "button": "單片機與灰度串口通訊使用文件",
-      "title": "單片機與灰度串口通訊使用文件",
+      "button": "單片機與灰度序列埠通訊使用文件",
+      "title": "單片機與灰度序列埠通訊使用文件",
       "close": "關閉",
-      "loadFailure": "串口通訊說明載入失敗"
+      "loadFailure": "序列埠通訊說明載入失敗"
     }
   },
   "simulation": {
     "title": "模擬",
-    "connectFirst": "連線裝置後再開始模擬",
+    "subtitle": "用偏移量觀察小車相對軌跡的位置變化。",
+    "connectFirst": "連線裝置後開始模擬",
     "polling": {
       "interval": "輪詢間隔",
       "stop": "停止輪詢",
       "start": "開始輪詢"
     },
     "viewport": {
-      "title": "小車模擬視圖",
-      "description": "依據感測器偏移量即時移動小車，拖曳視圖可調整觀察角度。",
+      "title": "小車姿態",
+      "description": "偏移量會即時驅動車輛位置，拖曳可調整視角。",
       "resetView": "重設視角",
-      "rendererDisabled": "測試環境未啟用 3D 渲染",
+      "rendererDisabled": "3D 渲染在測試環境中未啟用",
       "loadFailure": "3D 模型載入失敗：{error}",
       "loading": "正在載入 3D 模型"
     },
@@ -175,20 +179,22 @@
     "bars": {
       "title": "類比量",
       "analog": "類比量",
-      "normalized": "正規化"
+      "normalized": "正規化",
+      "value": "數值"
     }
   },
   "calibration": {
     "title": "校準",
     "connection": {
-      "ready": "裝置已連線並識別",
-      "notReady": "需要先連線並識別裝置"
+      "ready": "裝置已就緒，可以校準",
+      "notReady": "連線並識別裝置後可校準"
     },
     "data": {
       "title": "資料",
       "loading": "讀取中...",
       "read": "讀取校準資料",
       "empty": "尚未讀取校準資料",
+      "channel": "通道",
       "white": "白",
       "black": "黑"
     },
@@ -203,34 +209,34 @@
       "steps": {
         "prepare": {
           "title": "準備",
-          "description": "請準備底色和线色校準材料，依序完成擷取後儲存。",
+          "description": "請將感測器固定到 20mm-30mm 高度，準備好校準材料，點選開始校準進入校準步驟。",
           "start": "開始校準"
         },
         "white": {
-          "title": "擷取底色",
-          "description": "放置底色校準材料後開始擷取。",
-          "retry": "重試底色擷取",
-          "start": "開始底色擷取"
+          "title": "採集底色",
+          "description": "放置底色後，點選開始採集。",
+          "retry": "重試底色採集",
+          "start": "開始底色採集"
         },
         "black": {
-          "title": "擷取线色",
-          "description": "放置线色校準材料後開始擷取。",
-          "start": "開始线色擷取",
-          "waiting": "等待底色擷取"
+          "title": "採集線色",
+          "description": "放置線色後，點選開始採集。",
+          "start": "開始線色採集",
+          "waiting": "等待底色採集"
         },
         "blackFirstHalf": {
           "title": "採集線色左4路",
-          "description": "放置線色校準材料後開始採集左4路。",
+          "description": "放置線色後，開始採集左4路。",
           "start": "開始線色左4路採集"
         },
         "blackSecondHalf": {
           "title": "採集線色右4路",
-          "description": "放置線色校準材料後開始採集右4路。",
+          "description": "放置線色後，開始採集右4路。",
           "start": "開始線色右4路採集"
         },
         "save": {
           "title": "儲存",
-          "description": "確認擷取結果無誤後儲存到 Flash。",
+          "description": "確認採集結果無誤後儲存到 Flash。",
           "button": "儲存到 Flash"
         },
         "complete": {
@@ -334,20 +340,20 @@
     "navigationDisabled": "升級模式下僅可進行韌體升級"
   },
   "about": {
-    "title": "关于",
-    "subtitle": "查看软件标识、版本、公司与法律信息。",
-    "versionValue": "软件版本 {version}",
+    "title": "關於",
+    "subtitle": "查看軟體識別、版本、公司與法律資訊。",
+    "versionValue": "軟體版本 {version}",
     "details": {
-      "title": "产品信息"
+      "title": "產品資訊"
     },
     "company": "公司",
-    "website": "官网",
-    "developer": "软件开发者",
-    "openLink": "打开链接",
+    "website": "官網",
+    "developer": "軟體開發者",
+    "openLink": "開啟連結",
     "legal": {
-      "title": "版权声明与法律信息",
-      "subtitle": "适用于本软件的分发、使用与维护。",
-      "content": "版权所有 © {year} 北京感为科技有限公司。保留所有权利。本软件受著作权和相关法律保护。未经授权不得复制、分发、修改或用于商业用途。"
+      "title": "版權聲明與法律資訊",
+      "subtitle": "適用於本軟體的分發、使用與維護。",
+      "content": "版權所有 © {year} 北京感為科技有限公司。保留所有權利。本軟體受著作權和相關法律保護。未經授權不得複製、分發、修改或用於商業用途。"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Ganv 8チャンネルカラーコントラストセンサーアシスタント",
+    "title": "Ganv グレースケールセンサーデバッグアシスタント",
     "logoSemantics": "ブランドロゴ"
   },
   "topBar": {
@@ -12,7 +12,7 @@
     "realtime": "リアルタイムデータ",
     "calibration": "キャリブレーション",
     "simulation": "シミュレーション",
-    "about": "About"
+    "about": "情報"
   },
   "runMode": {
     "label": "動作モード：{mode}",
@@ -21,14 +21,14 @@
     "unknown": "--"
   },
   "notice": {
-    "initial": "ローカルのシリアルポートを選択してデバイスに接続してください。",
-    "connected": "シリアルポートに接続しました。リクエストを送信できます",
-    "disconnected": "シリアルポートが切断されました",
-    "disconnectedByPeer": "シリアル接続が閉じられました",
+    "initial": "シリアル接続後にデバイスの読み取りを開始します",
+    "connected": "接続しました。デバイスを読み取れます",
+    "disconnected": "シリアルが切断されました",
+    "disconnectedByPeer": "デバイスが接続を切断しました",
     "deviceInfoLoaded": "デバイス情報を読み込みました",
-    "restartRequested": "再起動コマンドを送信しました。デバイスのリセットを待ってください",
-    "bootloaderRequested": "Bootloader への移行リクエストを受け付けました。デバイスはアップグレードモードで再起動します",
-    "serialAbnormal": "シリアルポート異常のため接続を切断しました"
+    "restartRequested": "再起動コマンドを送信しました。デバイスのリセットを待っています",
+    "bootloaderRequested": "デバイスは再起動してアップグレードモードに入ります",
+    "serialAbnormal": "シリアル異常のため切断しました"
   },
   "connection": {
     "disconnected": "未接続",
@@ -43,10 +43,11 @@
   },
   "overview": {
     "title": "概要",
+    "subtitle": "デバイスに接続すると、バージョン、稼働時間、メンテナンス操作を確認できます。",
     "refresh": "更新",
     "deviceInfo": {
       "title": "デバイス情報",
-      "subtitle": "シリアル接続後に一度自動で読み込みます。手動更新もできます。"
+      "subtitle": "接続後に自動で読み込みます。手動更新もできます。"
     },
     "softwareVersion": {
       "title": "ソフトウェアバージョン",
@@ -64,12 +65,12 @@
       "hoursMinutesSeconds": "{hours} 時間 {minutes} 分 {seconds} 秒"
     },
     "description": {
-      "connectToRead": "デバイス接続後に読み取り可能",
-      "waiting": "デバイスの応答待ち"
+      "connectToRead": "接続後に読み取り",
+      "waiting": "デバイス待ち"
     },
     "deviceActions": {
-      "title": "デバイス操作",
-      "subtitle": "よく使うメンテナンス操作。",
+      "title": "メンテナンス操作",
+      "subtitle": "再起動とアップグレードはデバイスのメンテナンス操作です。現場の安全を確認してから実行してください。",
       "restart": "デバイスを再起動",
       "firmware": "ファームウェア更新"
     },
@@ -112,7 +113,8 @@
   },
   "debugDashboard": {
     "title": "リアルタイムデータ",
-    "connectFirst": "先にシリアル接続してください",
+    "subtitle": "8 チャンネルセンサーのデジタル状態、アナログ値、オフセット傾向を確認します。",
+    "connectFirst": "シリアル接続後にリアルタイムデータを表示します",
     "polling": {
       "interval": "ポーリング間隔",
       "stop": "ポーリング停止",
@@ -128,12 +130,13 @@
     },
     "analog": {
       "title": "アナログ値",
-      "analog": "アナログ",
-      "normalized": "正規化"
+      "analog": "アナログ値",
+      "normalized": "正規化",
+      "value": "値"
     },
     "offset": {
-      "title": "オフセット曲線",
-      "empty": "曲線データはまだありません"
+      "title": "オフセット傾向",
+      "empty": "ポーリング開始後に傾向を表示します"
     },
     "serialDoc": {
       "button": "マイコンとグレースケールのシリアル通信ガイド",
@@ -144,6 +147,7 @@
   },
   "simulation": {
     "title": "シミュレーション",
+    "subtitle": "オフセット量を使って、車両が軌道に対してどのように位置変化するかを確認します。",
     "connectFirst": "デバイス接続後にシミュレーションを開始できます",
     "polling": {
       "interval": "ポーリング間隔",
@@ -151,8 +155,8 @@
       "start": "ポーリング開始"
     },
     "viewport": {
-      "title": "車両シミュレーションビュー",
-      "description": "センサーのオフセットに基づいて車両をリアルタイムに移動します。ビューをドラッグして視点を調整できます。",
+      "title": "車両姿勢",
+      "description": "オフセットが車両位置をリアルタイムに動かします。ドラッグして視点を調整できます。",
       "resetView": "視点をリセット",
       "rendererDisabled": "テスト環境では 3D レンダリングは無効です",
       "loadFailure": "3D モデルの読み込みに失敗しました：{error}",
@@ -174,21 +178,23 @@
     },
     "bars": {
       "title": "アナログ値",
-      "analog": "アナログ",
-      "normalized": "正規化"
+      "analog": "アナログ値",
+      "normalized": "正規化",
+      "value": "値"
     }
   },
   "calibration": {
     "title": "キャリブレーション",
     "connection": {
-      "ready": "デバイスは接続され識別済みです",
-      "notReady": "先にデバイスを接続して識別してください"
+      "ready": "デバイスの準備ができており、キャリブレーションできます",
+      "notReady": "デバイスを接続して識別するとキャリブレーションできます"
     },
     "data": {
-      "title": "キャリブレーションデータ",
+      "title": "データ",
       "loading": "読み込み中...",
       "read": "キャリブレーションデータを読み取り",
       "empty": "キャリブレーションデータはまだ読み込まれていません",
+      "channel": "チャンネル",
       "white": "白",
       "black": "黒"
     },
@@ -198,39 +204,39 @@
       "boardType": {
         "label": "基板タイプ",
         "straight": "直線型",
-        "curved": "曲線型"
+        "curved": "弓型"
       },
       "steps": {
         "prepare": {
           "title": "準備",
-          "description": "底色と黒色のキャリブレーション材料を準備し、順番にキャプチャして保存してください。",
+          "description": "センサーを 20 mm〜30 mm の高さに固定し、キャリブレーション材料を準備してから、キャリブレーション開始をクリックして手順に進みます。",
           "start": "キャリブレーション開始"
         },
         "white": {
-          "title": "白をキャプチャ",
-          "description": "底色キャリブレーション材料を置いてからキャプチャを開始します。",
-          "retry": "白キャプチャを再試行",
-          "start": "白キャプチャ開始"
+          "title": "底色を取得",
+          "description": "底色を下に置き、取得開始をクリックします。",
+          "retry": "底色取得を再試行",
+          "start": "底色取得開始"
         },
         "black": {
-          "title": "黒をキャプチャ",
-          "description": "黒色キャリブレーション材料を置いてからキャプチャを開始します。",
-          "start": "黒キャプチャ開始",
-          "waiting": "白キャプチャ待ち"
+          "title": "ライン色を取得",
+          "description": "ライン色を下に置き、取得開始をクリックします。",
+          "start": "ライン色取得開始",
+          "waiting": "底色取得待ち"
         },
         "blackFirstHalf": {
-          "title": "ライン色 CH1-CH4 を取得",
-          "description": "ライン色キャリブレーション材料を置いてから CH1-CH4 を取得します。",
-          "start": "ライン色 CH1-CH4 取得開始"
+          "title": "ライン色左 4 チャンネルを取得",
+          "description": "ライン色を下に置き、左 4 チャンネルの取得を開始します。",
+          "start": "ライン色左 4 チャンネル取得開始"
         },
         "blackSecondHalf": {
-          "title": "ライン色 CH5-CH8 を取得",
-          "description": "ライン色キャリブレーション材料を置いてから CH5-CH8 を取得します。",
-          "start": "ライン色 CH5-CH8 取得開始"
+          "title": "ライン色右 4 チャンネルを取得",
+          "description": "ライン色を下に置き、右 4 チャンネルの取得を開始します。",
+          "start": "ライン色右 4 チャンネル取得開始"
         },
         "save": {
           "title": "保存",
-          "description": "キャプチャ結果を確認し、Flash に保存します。",
+          "description": "取得結果に問題がないことを確認してから Flash に保存します。",
           "button": "Flash に保存"
         },
         "complete": {
@@ -241,7 +247,7 @@
       }
     },
     "confirmSave": {
-      "title": "キャリブレーションデータを保存しますか",
+      "title": "キャリブレーションデータ保存の確認",
       "content": "保存するとデバイス Flash 内のキャリブレーションデータが上書きされます。",
       "cancel": "キャンセル",
       "confirm": "保存"
@@ -266,7 +272,7 @@
       "cancel": "キャンセル"
     },
     "enterDialog": {
-      "title": "アップグレードモードに入りますか",
+      "title": "アップグレードモード移行の確認",
       "content": "デバイスはアップグレードモードに切り替わり、シリアル接続は自動で切断されます。完了後にシリアルを再接続し、更新を開始してください。",
       "confirm": "入る"
     },
@@ -334,20 +340,20 @@
     "navigationDisabled": "アップグレードモードではファームウェア更新のみ使用できます"
   },
   "about": {
-    "title": "About",
-    "subtitle": "Software identity, version, company and legal information.",
-    "versionValue": "Version {version}",
+    "title": "情報",
+    "subtitle": "ソフトウェア識別情報、バージョン、会社情報、法的情報を確認します。",
+    "versionValue": "ソフトウェアバージョン {version}",
     "details": {
-      "title": "Product information"
+      "title": "製品情報"
     },
-    "company": "Company",
-    "website": "Website",
-    "developer": "Software developer",
-    "openLink": "Open link",
+    "company": "会社",
+    "website": "公式サイト",
+    "developer": "ソフトウェア開発者",
+    "openLink": "リンクを開く",
     "legal": {
-      "title": "Copyright and legal information",
-      "subtitle": "For software distribution and use.",
-      "content": "Copyright © {year} Ganv Technology Co., Ltd. All rights reserved. This software and its related materials are protected by copyright and applicable laws. Unauthorized copying, distribution, modification, reverse engineering or commercial reuse is prohibited unless permitted by the rights holder or applicable law."
+      "title": "著作権表示と法的情報",
+      "subtitle": "本ソフトウェアの配布、使用、保守に適用されます。",
+      "content": "Copyright © {year} Ganv Technology Co., Ltd. All rights reserved. 本ソフトウェアは著作権および関連法により保護されています。権利者の許可なく複製、配布、変更、または商用利用することは禁止されています。"
     }
   }
 }

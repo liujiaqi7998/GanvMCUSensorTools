@@ -16,19 +16,19 @@
   },
   "runMode": {
     "label": "Run mode: {mode}",
-    "normal": "Normal",
-    "bootloader": "Upgrade",
+    "normal": "Normal mode",
+    "bootloader": "Upgrade mode",
     "unknown": "--"
   },
   "notice": {
-    "initial": "Connect serial to start reading",
-    "connected": "Connected. Ready to read.",
+    "initial": "Connect serial to start reading the device",
+    "connected": "Connected. Ready to read the device",
     "disconnected": "Serial disconnected",
     "disconnectedByPeer": "Device disconnected",
     "deviceInfoLoaded": "Device information loaded",
-    "restartRequested": "Restart sent. Wait for reset.",
-    "bootloaderRequested": "Device will restart into upgrade mode.",
-    "serialAbnormal": "Serial error. Disconnected."
+    "restartRequested": "Restart command sent. Waiting for device reset",
+    "bootloaderRequested": "Device will restart into upgrade mode",
+    "serialAbnormal": "Serial error. Disconnected"
   },
   "connection": {
     "disconnected": "Disconnected",
@@ -66,11 +66,11 @@
     },
     "description": {
       "connectToRead": "Connect to read",
-      "waiting": "Waiting"
+      "waiting": "Waiting for device"
     },
     "deviceActions": {
-      "title": "Maintenance",
-      "subtitle": "Restart and upgrade are maintenance actions. Confirm the device is safe before continuing.",
+      "title": "Maintenance actions",
+      "subtitle": "Restart and upgrade are device maintenance actions. Confirm the site is safe before continuing.",
       "restart": "Restart device",
       "firmware": "Firmware upgrade"
     },
@@ -113,7 +113,7 @@
   },
   "debugDashboard": {
     "title": "Live data",
-    "subtitle": "Watch digital state, analog values, and offset trend across 8 channels.",
+    "subtitle": "Watch digital state, analog values, and offset trend across 8 sensor channels.",
     "connectFirst": "Connect serial to show live data",
     "polling": {
       "interval": "Polling interval",
@@ -147,7 +147,7 @@
   },
   "simulation": {
     "title": "Simulation",
-    "subtitle": "Use offset to watch how the car moves relative to the line.",
+    "subtitle": "Use offset to observe how the car position changes relative to the track.",
     "connectFirst": "Connect the device to start simulation",
     "polling": {
       "interval": "Polling interval",
@@ -186,11 +186,11 @@
   "calibration": {
     "title": "Calibration",
     "connection": {
-      "ready": "Device ready for calibration",
+      "ready": "Device is ready for calibration",
       "notReady": "Connect and identify the device to calibrate"
     },
     "data": {
-      "title": "Calibration data",
+      "title": "Data",
       "loading": "Reading...",
       "read": "Read calibration data",
       "empty": "No calibration data read yet",
@@ -209,30 +209,30 @@
       "steps": {
         "prepare": {
           "title": "Prepare",
-          "description": "Prepare white and black calibration materials, then capture and save them in order.",
+          "description": "Fix the sensor at a height of 20 mm to 30 mm, prepare the calibration materials, then click Start Calibration to enter the calibration steps.",
           "start": "Start calibration"
         },
         "white": {
-          "title": "Capture white",
-          "description": "Place the white calibration material, then start capture.",
-          "retry": "Retry white capture",
-          "start": "Start white capture"
+          "title": "Capture base color",
+          "description": "Place the base color underneath, then click Start Capture.",
+          "retry": "Retry base color capture",
+          "start": "Start base color capture"
         },
         "black": {
-          "title": "Capture black",
-          "description": "Place the black calibration material, then start capture.",
-          "start": "Start black capture",
-          "waiting": "Waiting for white capture"
+          "title": "Capture line color",
+          "description": "Place the line color underneath, then click Start Capture.",
+          "start": "Start line color capture",
+          "waiting": "Waiting for base color capture"
         },
         "blackFirstHalf": {
-          "title": "Capture line color CH1-CH4",
-          "description": "Place the line color calibration material, then capture CH1-CH4.",
-          "start": "Start line color CH1-CH4 capture"
+          "title": "Capture left 4 line-color channels",
+          "description": "Place the line color underneath, then start capturing the left 4 channels.",
+          "start": "Start left 4 line-color capture"
         },
         "blackSecondHalf": {
-          "title": "Capture line color CH5-CH8",
-          "description": "Place the line color calibration material, then capture CH5-CH8.",
-          "start": "Start line color CH5-CH8 capture"
+          "title": "Capture right 4 line-color channels",
+          "description": "Place the line color underneath, then start capturing the right 4 channels.",
+          "start": "Start right 4 line-color capture"
         },
         "save": {
           "title": "Save",
@@ -247,7 +247,7 @@
       }
     },
     "confirmSave": {
-      "title": "Save calibration data?",
+      "title": "Confirm saving calibration data",
       "content": "Saving will overwrite calibration data in device Flash.",
       "cancel": "Cancel",
       "confirm": "Save"
@@ -272,7 +272,7 @@
       "cancel": "Cancel"
     },
     "enterDialog": {
-      "title": "Enter upgrade mode?",
+      "title": "Confirm entering upgrade mode",
       "content": "The device will switch to upgrade mode and disconnect serial automatically. Reconnect serial after it finishes, then start upgrading.",
       "confirm": "Enter"
     },
@@ -342,7 +342,7 @@
   "about": {
     "title": "About",
     "subtitle": "Software identity, version, company and legal information.",
-    "versionValue": "Version {version}",
+    "versionValue": "Software version {version}",
     "details": {
       "title": "Product information"
     },
@@ -352,8 +352,8 @@
     "openLink": "Open link",
     "legal": {
       "title": "Copyright and legal information",
-      "subtitle": "For software distribution and use.",
-      "content": "Copyright © {year} Ganv Technology Co., Ltd. All rights reserved. This software and its related materials are protected by copyright and applicable laws. Unauthorized copying, distribution, modification, reverse engineering or commercial reuse is prohibited unless permitted by the rights holder or applicable law."
+      "subtitle": "For software distribution, use, and maintenance.",
+      "content": "Copyright © {year} Ganv Technology Co., Ltd. All rights reserved. This software is protected by copyright and applicable laws. Unauthorized copying, distribution, modification, or commercial use is prohibited."
     }
   }
 }

@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="310 390 325 150" width="100%" height="100%">
-  <path fill="none" stroke="#505050" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="M558,416H368.37c-2.63,0-4.98,1.63-5.89,4.09l-33.31,89.43c-1.53,4.11,1.51,8.48,5.89,8.48h94.35c2.74,0,5.16-1.77,5.99-4.38l10-31.43c1.29-4.06-1.74-8.19-5.99-8.19H405"/>
-  
-  <polyline fill="none" stroke="#505050" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="415,445 488,445 465.5,518 504,518 526,447 557,447 536.5,518 577,518 600.71,435.96"/>
-  
-  <circle cx="390.99" cy="475.01" r="11.01" fill="none" stroke="#FF6700" stroke-width="12"/>
-  <circle cx="604.59" cy="421.37" r="11.01" fill="none" stroke="#FF6700" stroke-width="12"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 343.96">
+  <rect fill="#fbe7e7" stroke-width="0" width="309" height="299" rx="42" ry="42"/>
+  <path fill="none" stroke="#e7211a" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="16" d="M241.7,47.68H52.06c-2.63,0-4.98,1.63-5.89,4.09L12.86,141.2c-1.53,4.11,1.51,8.48,5.89,8.48h94.35c2.74,0,5.16-1.77,5.99-4.38l10-31.43c1.29-4.06-1.74-8.19-5.99-8.19h-34.4"/>
+  <polyline fill="none" stroke="#e7211a" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" points="98.7 76.68 171.7 76.68 149.2 149.68 187.7 149.68 209.7 78.68 240.7 78.68 220.2 149.68 260.7 149.68 284.4 67.64"/>
+  <path fill="none" stroke="#ec671a" stroke-linejoin="bevel" stroke-width="12" d="M85.7,106.68c0,6.08-4.93,11.01-11.01,11.01s-11.01-4.93-11.01-11.01,4.93-11.01,11.01-11.01,11.01,4.93,11.01,11.01Z"/>
+  <path fill="none" stroke="#ec671a" stroke-linejoin="bevel" stroke-width="12" d="M299.3,53.05c0,6.08-4.93,11.01-11.01,11.01s-11.01-4.93-11.01-11.01,4.93-11.01,11.01-11.01,11.01,4.93,11.01,11.01Z"/>
+  <text fill="#e7211a" font-family="Roboto, MiSans, Microsoft YaHei, sans-serif" font-size="73" font-weight="700" transform="translate(5.94 267.6)"><tspan x="0" y="0">感为科技</tspan></text>
 </svg>
