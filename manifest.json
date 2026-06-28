@@ -1,11 +1,11 @@
 {
-    "name": "GanvMCUSensorTools",
-    "short_name": "GanvMCUSensorTools",
+    "name": "GanvGreySensorTools",
+    "short_name": "GanvGreySensorTools",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "GanvMCUSensorTools",
+    "description": "GanvGreySensorTools",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
