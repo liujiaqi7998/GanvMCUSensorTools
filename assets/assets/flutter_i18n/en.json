@@ -139,8 +139,8 @@
       "empty": "Start polling to show the trend"
     },
     "serialDoc": {
-      "button": "Serial communication guide",
-      "title": "Serial communication guide",
+      "button": "MCU and grayscale serial communication guide",
+      "title": "MCU and grayscale serial communication guide",
       "close": "Close",
       "loadFailure": "Failed to load the serial communication guide"
     }
