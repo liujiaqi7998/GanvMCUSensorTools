@@ -3,6 +3,13 @@
     "title": "Ganv グレースケールセンサーデバッグアシスタント",
     "logoSemantics": "ブランドロゴ"
   },
+  "offlineDownload": {
+    "title": "オフライン版",
+    "message": "オフライン版クライアントをダウンロードできます。さまざまなプラットフォーム向けの版を順次公開します。",
+    "doNotRemind": "次回から表示しない",
+    "later": "後で",
+    "openDownloads": "ダウンロードページへ"
+  },
   "topBar": {
     "language": "Language"
   },
@@ -12,7 +19,8 @@
     "realtime": "リアルタイムデータ",
     "calibration": "キャリブレーション",
     "simulation": "シミュレーション",
-    "about": "情報"
+    "about": "情報",
+    "download": "ダウンロード"
   },
   "runMode": {
     "label": "動作モード：{mode}",
@@ -55,10 +63,15 @@
     },
     "hardwareVersion": {
       "title": "ハードウェアバージョン",
-      "description": "現在のデバイスハードウェアバージョン"
+      "description": "現在のデバイスハードウェアバージョン",
+      "unprogrammed": "未設定"
+    },
+    "boardType": {
+      "title": "グレースケール外形",
+      "description": "現在のグレースケールセンサーの外形"
     },
     "runtime": {
-      "title": "稼働時間",
+      "title": "グレースケール稼働時間",
       "description": "今回の電源投入後の累積稼働時間",
       "seconds": "{seconds} 秒",
       "minutesSeconds": "{minutes} 分 {seconds} 秒",
@@ -195,9 +208,10 @@
       "read": "キャリブレーションデータを読み取り",
       "empty": "キャリブレーションデータはまだ読み込まれていません",
       "channel": "チャンネル",
-      "white": "白",
-      "black": "黒"
+      "background": "背景色",
+      "line": "ライン色"
     },
+    "teachingVideo": "解説動画",
     "wizard": {
       "title": "センサーキャリブレーションウィザード",
       "previous": "前へ",
@@ -216,23 +230,27 @@
           "title": "底色を取得",
           "description": "底色を下に置き、取得開始をクリックします。",
           "retry": "底色取得を再試行",
-          "start": "底色取得開始"
+          "start": "底色取得開始",
+          "recapture": "底色を再取得"
         },
         "black": {
           "title": "ライン色を取得",
           "description": "ライン色を下に置き、取得開始をクリックします。",
           "start": "ライン色取得開始",
+          "recapture": "ライン色を再取得",
           "waiting": "底色取得待ち"
         },
         "blackFirstHalf": {
           "title": "ライン色左 4 チャンネルを取得",
           "description": "ライン色を下に置き、左 4 チャンネルの取得を開始します。",
-          "start": "ライン色左 4 チャンネル取得開始"
+          "start": "ライン色左 4 チャンネル取得開始",
+          "recapture": "左4チャンネルのライン色を再取得"
         },
         "blackSecondHalf": {
           "title": "ライン色右 4 チャンネルを取得",
           "description": "ライン色を下に置き、右 4 チャンネルの取得を開始します。",
-          "start": "ライン色右 4 チャンネル取得開始"
+          "start": "ライン色右 4 チャンネル取得開始",
+          "recapture": "右4チャンネルのライン色を再取得"
         },
         "save": {
           "title": "保存",
@@ -244,7 +262,8 @@
           "description": "キャリブレーション完了",
           "back": "戻る"
         }
-      }
+      },
+      "recapture": "再取得"
     },
     "confirmSave": {
       "title": "キャリブレーションデータ保存の確認",
@@ -252,7 +271,11 @@
       "cancel": "キャンセル",
       "confirm": "保存"
     },
-    "imageLoadFailure": "画像の読み込みに失敗しました"
+    "imageLoadFailure": "画像の読み込みに失敗しました",
+    "overexposedDialog": {
+      "title": "校正エラー",
+      "confirm": "了解"
+    }
   },
   "firmware": {
     "title": "ファームウェア更新",
@@ -262,6 +285,7 @@
       "subtitle": ".bin ファームウェアパッケージを選択し、アップグレードモードに入ってから更新を開始します。",
       "select": "ファームウェアを選択",
       "enterUpgradeMode": "アップグレードモードへ",
+      "exitUpgradeMode": "アップグレードモードを終了",
       "startUpgrade": "更新開始"
     },
     "failure": {
@@ -276,6 +300,11 @@
       "content": "デバイスはアップグレードモードに切り替わり、シリアル接続は自動で切断されます。完了後にシリアルを再接続し、更新を開始してください。",
       "confirm": "入る"
     },
+    "exitDialog": {
+      "title": "アップグレードモード終了の確認",
+      "content": "更新開始前であれば通常モードに戻り、シリアル接続が切断されます。更新開始後やアプリが無効な場合は終了できません。",
+      "confirm": "終了"
+    },
     "completeDialog": {
       "title": "更新完了",
       "content": "ファームウェア更新が完了し、シリアル接続は切断されました。デバイスを使い続けるにはシリアルを再接続してください。",
@@ -288,7 +317,9 @@
     },
     "info": {
       "title": "ファームウェア情報",
-      "hardwareVersion": "ハードウェアバージョン {version}"
+      "hardwareVersion": "ハードウェアバージョン {version}",
+      "product": "製品：8 チャンネルグレースケールセンサー",
+      "softwareVersion": "ソフトウェアバージョン {version}"
     },
     "progress": {
       "title": "更新進行状況",
@@ -301,7 +332,16 @@
         "complete": "完了"
       }
     },
-    "placeholder": "ファームウェアアップグレードの移行は未完了です"
+    "placeholder": "ファームウェアアップグレードの移行は未完了です",
+    "compatibilityDialog": {
+      "title": "ファームウェアの互換性を確認できません",
+      "force": "強制書き込み"
+    },
+    "forceRiskDialog": {
+      "title": "強制更新の確認",
+      "content": "強制更新にはリスクがあります。ファームウェアが現在のハードウェアに適合しない可能性があります。",
+      "confirm": "強制更新する"
+    }
   },
   "errors": {
     "serial": {
@@ -317,12 +357,13 @@
       "normalModeRequired": "アップグレードモードに入れるのは通常モードのみです",
       "selectPackageFirst": "先にファームウェアパッケージを選択してください",
       "enterUpgradeModeFirst": "先にアップグレードモードに入ってください",
+      "exitRejected": "安全にアップグレードモードを終了できません。ファームウェアを再更新してください。",
       "package": {
         "packageTruncated": "ファームウェアパッケージが不完全です",
         "packageInvalidMagic": "ファームウェアパッケージ形式が正しくありません",
         "packageUnsupportedVersion": "ファームウェアパッケージのバージョンはサポートされていません",
         "packageInvalidHeaderSize": "ファームウェアパッケージのヘッダー長が正しくありません",
-        "packageHardwareMismatch": "ファームウェアパッケージのハードウェアバージョンが一致しません",
+        "packageProductMismatch": "ファームウェアパッケージのハードウェアバージョンが一致しません",
         "packageTargetMismatch": "ファームウェアパッケージのターゲット種別が一致しません",
         "packageAppBaseMismatch": "ファームウェアパッケージの開始アドレスが一致しません",
         "packageInvalidSize": "ファームウェアパッケージサイズが無効です",
@@ -333,7 +374,15 @@
         "chunkTooLarge": "ファームウェアデータチャンクが大きすぎます",
         "responseFormat": "デバイス更新応答の形式が正しくありません",
         "rejected": "デバイスがファームウェア更新リクエストを拒否しました"
-      }
+      },
+      "hardwareVersionUnprogrammed": "ハードウェアバージョンが未設定のため、互換性を確認できません。",
+      "compatibilityMismatch": "このファームウェアはハードウェアバージョンと互換性がありません。",
+      "compatibilityUnavailable": "互換性マップを取得または解析できません。ネットワーク接続を確認してください。",
+      "packageProductMismatch": "ファームウェアの製品モデルが一致しません"
+    },
+    "calibration": {
+      "overexposed": "センサーが露出オーバーです。光量または距離を調整し、再取得してください。",
+      "locked": "校正エラーによりロックされ、校正を開始できません。デバイスを再起動してください。"
     }
   },
   "bootloaderLock": {

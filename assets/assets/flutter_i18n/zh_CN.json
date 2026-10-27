@@ -3,6 +3,13 @@
     "title": "感为灰度传感器调试助手",
     "logoSemantics": "品牌 Logo"
   },
+  "offlineDownload": {
+    "title": "离线客户端",
+    "message": "您可以下载客户端离线版本，多种平台等您下载",
+    "doNotRemind": "下次打开不再提醒",
+    "later": "稍后",
+    "openDownloads": "前往下载页"
+  },
   "topBar": {
     "language": "Language"
   },
@@ -12,7 +19,8 @@
     "realtime": "实时数据",
     "calibration": "校准",
     "simulation": "仿真",
-    "about": "关于"
+    "about": "关于",
+    "download": "下载"
   },
   "runMode": {
     "label": "运行模式：{mode}",
@@ -55,10 +63,15 @@
     },
     "hardwareVersion": {
       "title": "硬件版本",
-      "description": "当前设备硬件版本"
+      "description": "当前设备硬件版本",
+      "unprogrammed": "未写入"
+    },
+    "boardType": {
+      "title": "灰度外形",
+      "description": "当前灰度传感器外形"
     },
     "runtime": {
-      "title": "运行时长",
+      "title": "灰度运行时长",
       "description": "设备本次上电累计运行时间",
       "seconds": "{seconds} 秒",
       "minutesSeconds": "{minutes} 分 {seconds} 秒",
@@ -195,9 +208,10 @@
       "read": "读取校准数据",
       "empty": "尚未读取校准数据",
       "channel": "通道",
-      "white": "白",
-      "black": "黑"
+      "background": "底色",
+      "line": "线色"
     },
+    "teachingVideo": "教学视频",
     "wizard": {
       "title": "传感器校准向导",
       "previous": "上一步",
@@ -216,23 +230,27 @@
           "title": "采集底色",
           "description": "放置底色下，点击开始采集",
           "retry": "重试底色采集",
-          "start": "开始底色采集"
+          "start": "开始底色采集",
+          "recapture": "重新底色采集"
         },
         "black": {
           "title": "采集线色",
           "description": "放置线色下，点击开始采集",
           "start": "开始线色采集",
+          "recapture": "重新线色采集",
           "waiting": "等待底色采集"
         },
         "blackFirstHalf": {
           "title": "采集线色左4路",
           "description": "放置线色下，点击开始采集左4路。",
-          "start": "开始线色左4路采集"
+          "start": "开始线色左4路采集",
+          "recapture": "重新线色左4路采集"
         },
         "blackSecondHalf": {
           "title": "采集线色右4路",
           "description": "放置线色下，点击开始采集右4路。",
-          "start": "开始线色右4路采集"
+          "start": "开始线色右4路采集",
+          "recapture": "重新线色右4路采集"
         },
         "save": {
           "title": "保存",
@@ -244,7 +262,8 @@
           "description": "校准完成",
           "back": "返回"
         }
-      }
+      },
+      "recapture": "重新采集"
     },
     "confirmSave": {
       "title": "确认保存校准数据",
@@ -252,7 +271,11 @@
       "cancel": "取消",
       "confirm": "确认保存"
     },
-    "imageLoadFailure": "图片加载失败"
+    "imageLoadFailure": "图片加载失败",
+    "overexposedDialog": {
+      "title": "校准错误",
+      "confirm": "知道了"
+    }
   },
   "firmware": {
     "title": "固件升级",
@@ -262,6 +285,7 @@
       "subtitle": "选择 .bin 固件包后进入升级模式并开始升级。",
       "select": "选择固件",
       "enterUpgradeMode": "进入升级模式",
+      "exitUpgradeMode": "退出升级模式",
       "startUpgrade": "开始升级"
     },
     "failure": {
@@ -276,6 +300,11 @@
       "content": "设备将切换到升级模式并自动断开串口。完成后请重新连接串口，再开始升级。",
       "confirm": "确认进入"
     },
+    "exitDialog": {
+      "title": "确认退出升级模式",
+      "content": "若尚未开始升级，设备将返回正常模式并断开串口。若升级已开始或应用固件无效，设备会拒绝退出。",
+      "confirm": "确认退出"
+    },
     "completeDialog": {
       "title": "升级完成",
       "content": "固件升级已完成，串口已断开。请重新连接串口后继续使用设备。",
@@ -288,7 +317,9 @@
     },
     "info": {
       "title": "固件信息",
-      "hardwareVersion": "硬件版本 {version}"
+      "hardwareVersion": "硬件版本 {version}",
+      "product": "产品：8 路灰度传感器",
+      "softwareVersion": "软件版本 {version}"
     },
     "progress": {
       "title": "升级进度",
@@ -301,7 +332,16 @@
         "complete": "完成"
       }
     },
-    "placeholder": "固件升级后续迁移"
+    "placeholder": "固件升级后续迁移",
+    "compatibilityDialog": {
+      "title": "无法验证固件兼容性",
+      "force": "强制写入"
+    },
+    "forceRiskDialog": {
+      "title": "确认强制升级",
+      "content": "强制升级有风险，请谨慎。固件可能与当前硬件不匹配。",
+      "confirm": "仍要强制升级"
+    }
   },
   "errors": {
     "serial": {
@@ -317,12 +357,13 @@
       "normalModeRequired": "仅正常模式可进入升级模式",
       "selectPackageFirst": "请先选择固件包",
       "enterUpgradeModeFirst": "请先进入升级模式",
+      "exitRejected": "设备无法安全退出升级模式，请重新升级固件",
       "package": {
         "packageTruncated": "固件包不完整",
         "packageInvalidMagic": "固件包格式错误",
         "packageUnsupportedVersion": "固件包版本不支持",
         "packageInvalidHeaderSize": "固件包头长度错误",
-        "packageHardwareMismatch": "固件包硬件版本不匹配",
+        "packageProductMismatch": "固件包硬件版本不匹配",
         "packageTargetMismatch": "固件包目标类型不匹配",
         "packageAppBaseMismatch": "固件包起始地址不匹配",
         "packageInvalidSize": "固件包大小无效",
@@ -333,7 +374,15 @@
         "chunkTooLarge": "固件数据块过大",
         "responseFormat": "设备升级响应格式错误",
         "rejected": "设备拒绝固件升级请求"
-      }
+      },
+      "hardwareVersionUnprogrammed": "设备硬件版本尚未写入，无法核对兼容表。",
+      "compatibilityMismatch": "固件与硬件版本不匹配，无法正常升级。",
+      "compatibilityUnavailable": "无法获取或解析兼容表，请检查网络连接。",
+      "packageProductMismatch": "固件包产品型号不匹配"
+    },
+    "calibration": {
+      "overexposed": "探头过曝，请调整光线或距离后重新采集。",
+      "locked": "校准出错后已锁定，无法进入校准。请重启设备。"
     }
   },
   "bootloaderLock": {

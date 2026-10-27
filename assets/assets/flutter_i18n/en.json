@@ -3,6 +3,13 @@
     "title": "GanvGreySensorTools",
     "logoSemantics": "Brand logo"
   },
+  "offlineDownload": {
+    "title": "Offline client",
+    "message": "Download an offline client version, with more platforms on the way.",
+    "doNotRemind": "Don't remind me again",
+    "later": "Later",
+    "openDownloads": "Open downloads"
+  },
   "topBar": {
     "language": "Language"
   },
@@ -12,7 +19,8 @@
     "realtime": "Live data",
     "calibration": "Calibration",
     "simulation": "Simulation",
-    "about": "About"
+    "about": "About",
+    "download": "Download"
   },
   "runMode": {
     "label": "Run mode: {mode}",
@@ -55,10 +63,15 @@
     },
     "hardwareVersion": {
       "title": "Hardware version",
-      "description": "Current device hardware version"
+      "description": "Current device hardware version",
+      "unprogrammed": "Not programmed"
+    },
+    "boardType": {
+      "title": "Grayscale shape",
+      "description": "Current grayscale sensor shape"
     },
     "runtime": {
-      "title": "Runtime",
+      "title": "Grayscale runtime",
       "description": "Accumulated runtime since this power-on",
       "seconds": "{seconds} s",
       "minutesSeconds": "{minutes} min {seconds} s",
@@ -195,9 +208,10 @@
       "read": "Read calibration data",
       "empty": "No calibration data read yet",
       "channel": "Channel",
-      "white": "White",
-      "black": "Black"
+      "background": "Background",
+      "line": "Line"
     },
+    "teachingVideo": "Tutorial video",
     "wizard": {
       "title": "Sensor calibration wizard",
       "previous": "Previous",
@@ -216,23 +230,27 @@
           "title": "Capture base color",
           "description": "Place the base color underneath, then click Start Capture.",
           "retry": "Retry base color capture",
-          "start": "Start base color capture"
+          "start": "Start base color capture",
+          "recapture": "Recapture base color"
         },
         "black": {
           "title": "Capture line color",
           "description": "Place the line color underneath, then click Start Capture.",
           "start": "Start line color capture",
+          "recapture": "Recapture line color",
           "waiting": "Waiting for base color capture"
         },
         "blackFirstHalf": {
           "title": "Capture left 4 line-color channels",
           "description": "Place the line color underneath, then start capturing the left 4 channels.",
-          "start": "Start left 4 line-color capture"
+          "start": "Start left 4 line-color capture",
+          "recapture": "Recapture left 4 line-color channels"
         },
         "blackSecondHalf": {
           "title": "Capture right 4 line-color channels",
           "description": "Place the line color underneath, then start capturing the right 4 channels.",
-          "start": "Start right 4 line-color capture"
+          "start": "Start right 4 line-color capture",
+          "recapture": "Recapture right 4 line-color channels"
         },
         "save": {
           "title": "Save",
@@ -244,7 +262,8 @@
           "description": "Calibration complete",
           "back": "Back"
         }
-      }
+      },
+      "recapture": "Capture again"
     },
     "confirmSave": {
       "title": "Confirm saving calibration data",
@@ -252,7 +271,11 @@
       "cancel": "Cancel",
       "confirm": "Save"
     },
-    "imageLoadFailure": "Failed to load image"
+    "imageLoadFailure": "Failed to load image",
+    "overexposedDialog": {
+      "title": "Calibration error",
+      "confirm": "OK"
+    }
   },
   "firmware": {
     "title": "Firmware upgrade",
@@ -262,6 +285,7 @@
       "subtitle": "Select a .bin firmware package, enter upgrade mode, then start upgrading.",
       "select": "Select firmware",
       "enterUpgradeMode": "Enter upgrade mode",
+      "exitUpgradeMode": "Exit upgrade mode",
       "startUpgrade": "Start upgrade"
     },
     "failure": {
@@ -276,6 +300,11 @@
       "content": "The device will switch to upgrade mode and disconnect serial automatically. Reconnect serial after it finishes, then start upgrading.",
       "confirm": "Enter"
     },
+    "exitDialog": {
+      "title": "Confirm exiting upgrade mode",
+      "content": "If the upgrade has not started, the device will return to normal mode and disconnect serial. The device will reject exit if an upgrade has started or the app image is invalid.",
+      "confirm": "Exit"
+    },
     "completeDialog": {
       "title": "Upgrade complete",
       "content": "Firmware upgrade is complete and serial has disconnected. Reconnect serial to continue using the device.",
@@ -288,7 +317,9 @@
     },
     "info": {
       "title": "Firmware information",
-      "hardwareVersion": "Hardware version {version}"
+      "hardwareVersion": "Hardware version {version}",
+      "product": "Product: 8-channel grayscale sensor",
+      "softwareVersion": "Software version {version}"
     },
     "progress": {
       "title": "Upgrade progress",
@@ -301,7 +332,16 @@
         "complete": "Complete"
       }
     },
-    "placeholder": "Firmware upgrade migration pending"
+    "placeholder": "Firmware upgrade migration pending",
+    "compatibilityDialog": {
+      "title": "Firmware compatibility not verified",
+      "force": "Force write"
+    },
+    "forceRiskDialog": {
+      "title": "Confirm forced upgrade",
+      "content": "A forced upgrade is risky. The firmware may not match this hardware. Proceed with caution.",
+      "confirm": "Force upgrade anyway"
+    }
   },
   "errors": {
     "serial": {
@@ -317,12 +357,13 @@
       "normalModeRequired": "Only normal mode can enter upgrade mode",
       "selectPackageFirst": "Select a firmware package first",
       "enterUpgradeModeFirst": "Enter upgrade mode first",
+      "exitRejected": "The device cannot safely exit upgrade mode. Upgrade the firmware again.",
       "package": {
         "packageTruncated": "Firmware package is incomplete",
         "packageInvalidMagic": "Firmware package format is invalid",
         "packageUnsupportedVersion": "Firmware package version is unsupported",
         "packageInvalidHeaderSize": "Firmware package header length is invalid",
-        "packageHardwareMismatch": "Firmware package hardware version does not match",
+        "packageProductMismatch": "Firmware package hardware version does not match",
         "packageTargetMismatch": "Firmware package target type does not match",
         "packageAppBaseMismatch": "Firmware package start address does not match",
         "packageInvalidSize": "Firmware package size is invalid",
@@ -333,7 +374,15 @@
         "chunkTooLarge": "Firmware data chunk is too large",
         "responseFormat": "Device upgrade response format is invalid",
         "rejected": "Device rejected the firmware upgrade request"
-      }
+      },
+      "hardwareVersionUnprogrammed": "The hardware version has not been programmed, so compatibility cannot be checked.",
+      "compatibilityMismatch": "This firmware is not compatible with the hardware version.",
+      "compatibilityUnavailable": "The compatibility map could not be loaded or parsed. Check your network connection.",
+      "packageProductMismatch": "Firmware package product model does not match"
+    },
+    "calibration": {
+      "overexposed": "Sensor is overexposed. Adjust the light or distance, then capture again.",
+      "locked": "Calibration is locked after an error. Restart the device to calibrate again."
     }
   },
   "bootloaderLock": {

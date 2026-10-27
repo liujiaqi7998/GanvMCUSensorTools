@@ -3,6 +3,13 @@
     "title": "感為灰階感測器除錯助手",
     "logoSemantics": "品牌 Logo"
   },
+  "offlineDownload": {
+    "title": "離線客戶端",
+    "message": "您可以下載客戶端離線版本，多種平台等您下載",
+    "doNotRemind": "下次開啟不再提醒",
+    "later": "稍後",
+    "openDownloads": "前往下載頁"
+  },
   "topBar": {
     "language": "Language"
   },
@@ -12,7 +19,8 @@
     "realtime": "即時資料",
     "calibration": "校準",
     "simulation": "模擬",
-    "about": "關於"
+    "about": "關於",
+    "download": "下載"
   },
   "runMode": {
     "label": "執行模式：{mode}",
@@ -55,10 +63,15 @@
     },
     "hardwareVersion": {
       "title": "硬體版本",
-      "description": "目前裝置硬體版本"
+      "description": "目前裝置硬體版本",
+      "unprogrammed": "未寫入"
+    },
+    "boardType": {
+      "title": "灰度外形",
+      "description": "目前灰度感測器外形"
     },
     "runtime": {
-      "title": "執行時間",
+      "title": "灰度運行時長",
       "description": "裝置本次上電累計執行時間",
       "seconds": "{seconds} 秒",
       "minutesSeconds": "{minutes} 分 {seconds} 秒",
@@ -195,9 +208,10 @@
       "read": "讀取校準資料",
       "empty": "尚未讀取校準資料",
       "channel": "通道",
-      "white": "白",
-      "black": "黑"
+      "background": "底色",
+      "line": "線色"
     },
+    "teachingVideo": "教學影片",
     "wizard": {
       "title": "感測器校準精靈",
       "previous": "上一步",
@@ -216,23 +230,27 @@
           "title": "採集底色",
           "description": "放置底色後，點選開始採集。",
           "retry": "重試底色採集",
-          "start": "開始底色採集"
+          "start": "開始底色採集",
+          "recapture": "重新底色採集"
         },
         "black": {
           "title": "採集線色",
           "description": "放置線色後，點選開始採集。",
           "start": "開始線色採集",
+          "recapture": "重新線色採集",
           "waiting": "等待底色採集"
         },
         "blackFirstHalf": {
           "title": "採集線色左4路",
           "description": "放置線色後，開始採集左4路。",
-          "start": "開始線色左4路採集"
+          "start": "開始線色左4路採集",
+          "recapture": "重新線色左4路採集"
         },
         "blackSecondHalf": {
           "title": "採集線色右4路",
           "description": "放置線色後，開始採集右4路。",
-          "start": "開始線色右4路採集"
+          "start": "開始線色右4路採集",
+          "recapture": "重新線色右4路採集"
         },
         "save": {
           "title": "儲存",
@@ -244,7 +262,8 @@
           "description": "校準完成",
           "back": "返回"
         }
-      }
+      },
+      "recapture": "重新採集"
     },
     "confirmSave": {
       "title": "確認儲存校準資料",
@@ -252,7 +271,11 @@
       "cancel": "取消",
       "confirm": "確認儲存"
     },
-    "imageLoadFailure": "圖片載入失敗"
+    "imageLoadFailure": "圖片載入失敗",
+    "overexposedDialog": {
+      "title": "校準錯誤",
+      "confirm": "知道了"
+    }
   },
   "firmware": {
     "title": "韌體升級",
@@ -262,6 +285,7 @@
       "subtitle": "選擇 .bin 韌體包後進入升級模式並開始升級。",
       "select": "選擇韌體",
       "enterUpgradeMode": "進入升級模式",
+      "exitUpgradeMode": "退出升級模式",
       "startUpgrade": "開始升級"
     },
     "failure": {
@@ -276,6 +300,11 @@
       "content": "裝置將切換到升級模式並自動中斷序列埠。完成後請重新連線序列埠，再開始升級。",
       "confirm": "確認進入"
     },
+    "exitDialog": {
+      "title": "確認退出升級模式",
+      "content": "若尚未開始升級，裝置將返回正常模式並中斷序列埠。若升級已開始或應用韌體無效，裝置會拒絕退出。",
+      "confirm": "確認退出"
+    },
     "completeDialog": {
       "title": "升級完成",
       "content": "韌體升級已完成，序列埠已中斷連線。請重新連線序列埠後繼續使用裝置。",
@@ -288,7 +317,9 @@
     },
     "info": {
       "title": "韌體資訊",
-      "hardwareVersion": "硬體版本 {version}"
+      "hardwareVersion": "硬體版本 {version}",
+      "product": "產品：8 路灰度感測器",
+      "softwareVersion": "軟體版本 {version}"
     },
     "progress": {
       "title": "升級進度",
@@ -301,7 +332,16 @@
         "complete": "完成"
       }
     },
-    "placeholder": "韌體升級後續遷移"
+    "placeholder": "韌體升級後續遷移",
+    "compatibilityDialog": {
+      "title": "無法驗證韌體相容性",
+      "force": "強制寫入"
+    },
+    "forceRiskDialog": {
+      "title": "確認強制升級",
+      "content": "強制升級有風險，請謹慎。韌體可能與目前硬體不相容。",
+      "confirm": "仍要強制升級"
+    }
   },
   "errors": {
     "serial": {
@@ -317,12 +357,13 @@
       "normalModeRequired": "僅正常模式可進入升級模式",
       "selectPackageFirst": "請先選擇韌體包",
       "enterUpgradeModeFirst": "請先進入升級模式",
+      "exitRejected": "裝置無法安全退出升級模式，請重新升級韌體",
       "package": {
         "packageTruncated": "韌體包不完整",
         "packageInvalidMagic": "韌體包格式錯誤",
         "packageUnsupportedVersion": "韌體包版本不支援",
         "packageInvalidHeaderSize": "韌體包標頭長度錯誤",
-        "packageHardwareMismatch": "韌體包硬體版本不相符",
+        "packageProductMismatch": "韌體包硬體版本不相符",
         "packageTargetMismatch": "韌體包目標類型不相符",
         "packageAppBaseMismatch": "韌體包起始位址不相符",
         "packageInvalidSize": "韌體包大小無效",
@@ -333,7 +374,15 @@
         "chunkTooLarge": "韌體資料區塊過大",
         "responseFormat": "裝置升級回應格式錯誤",
         "rejected": "裝置拒絕韌體升級請求"
-      }
+      },
+      "hardwareVersionUnprogrammed": "裝置硬體版本尚未寫入，無法核對相容表。",
+      "compatibilityMismatch": "韌體與硬體版本不相容，無法正常升級。",
+      "compatibilityUnavailable": "無法取得或解析相容表，請檢查網路連線。",
+      "packageProductMismatch": "韌體包產品型號不相符"
+    },
+    "calibration": {
+      "overexposed": "探頭過曝，請調整光線或距離後重新採集。",
+      "locked": "校準出錯後已鎖定，無法進入校準。請重新啟動裝置。"
     }
   },
   "bootloaderLock": {

@@ -1,0 +1,7 @@
+﻿{
+  "schemaVersion": 1,
+  "productId": "0x01",
+  "compatibility": {
+    "0x10": ["0x37"]
+  }
+}
