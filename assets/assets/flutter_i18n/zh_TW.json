@@ -94,6 +94,10 @@
       "confirm": "確認執行"
     }
   },
+  "downloadPage": {
+    "unavailable": "\u76ee\u524d\u7121\u6cd5\u8f09\u5165\u4e0b\u8f09\u9801\u9762\u3002\u8acb\u6aa2\u67e5\u7db2\u8def\u6216 WebView2 \u57f7\u884c\u74b0\u5883\u3002",
+    "openInBrowser": "\u5728\u700f\u89bd\u5668\u4e2d\u958b\u555f"
+  },
   "serialPortPicker": {
     "title": "選擇序列埠",
     "loadFailure": "讀取序列埠清單失敗：{error}",

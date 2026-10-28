@@ -94,6 +94,10 @@
       "confirm": "Confirm"
     }
   },
+  "downloadPage": {
+    "unavailable": "The download page could not be loaded. Check your network or WebView2 Runtime.",
+    "openInBrowser": "Open in browser"
+  },
   "serialPortPicker": {
     "title": "Select serial port",
     "loadFailure": "Failed to read serial port list: {error}",
