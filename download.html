@@ -43,12 +43,7 @@
     .client-action p { margin: 8px 0 18px; color: #5c7188; font-size: 12px; line-height: 1.6; }
     .download-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 17px; border-radius: 10px; background: #176fc1; color: #fff; font-size: 14px; font-weight: 750; text-align: center; text-decoration: none; box-shadow: 0 7px 15px #176fc126; }
     .download-button:hover, .download-button:focus-visible { background: #0f5da8; }
-    .firmware-empty { padding: 42px 28px; border: 1px dashed #a9c5df; border-radius: 20px; background: #ffffffbf; text-align: center; }
-    .empty-mark { display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto 17px; border-radius: 17px; background: #e7f1fb; color: #3574aa; font-size: 27px; }
-    .firmware-empty h3 { margin: 0 0 8px; font-size: 19px; }
-    .firmware-empty p { max-width: 520px; margin: 0 auto; color: #62758b; font-size: 14px; line-height: 1.7; }
     .firmware-list { display: grid; gap: 16px; }
-    .firmware-list:empty { display: none; }
     .firmware-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: start; padding: 24px; border: 1px solid #d9e6f3; border-radius: 18px; background: #fff; box-shadow: 0 10px 27px #214f7b0c; }
     .firmware-card h3 { margin: 0 0 10px; overflow-wrap: anywhere; font-size: 18px; }
     .firmware-description { min-height: 3em; color: #516780; font-size: 14px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -84,39 +79,19 @@
       </article>
     </section>
     <section id="firmware" aria-labelledby="firmware-heading">
-      <div class="section-heading"><div><h2 id="firmware-heading">历史固件</h2><p>已发布的固件按文件名排序，每项附有独立说明。</p></div><span class="section-tag">固件归档</span></div>
-      <div id="firmware-list" class="firmware-list" aria-live="polite">
-        <!-- 正式发布固件时，复制下方卡片并填写真实文件名；同名 TXT 可作为说明。
-        <article class="firmware-card" data-filename="firmware_20261027.bin">
-          <div><h3>firmware_20261027.bin</h3><div class="firmware-description">固件说明加载中…</div></div>
-          <a class="download-button" href="/downloads/firmware/firmware_20261027.bin" download>下载固件 <span aria-hidden="true">↓</span></a>
+      <div class="section-heading"><div><h2 id="firmware-heading">历史固件</h2><p>已发布固件及适用硬件说明。</p></div><span class="section-tag">固件归档</span></div>
+      <div id="firmware-list" class="firmware-list">
+        <article class="firmware-card" data-filename="灰度传感器固件V1.0.bin">
+          <div>
+            <h3>灰度传感器固件 V1.0</h3>
+            <div class="firmware-description">固件兼容弓形硬件V1.1与直型硬件V4.2</div>
+          </div>
+          <a class="download-button" href="/downloads/firmware/灰度传感器固件V1.0.bin" download>下载固件 <span aria-hidden="true">↓</span></a>
         </article>
-        将 firmware_20261027.txt 放在同目录；未提供时显示默认说明。
-        -->
       </div>
-      <div id="firmware-empty" class="firmware-empty"><span class="empty-mark" aria-hidden="true">▣</span><h3>暂无已发布固件</h3><p>正式固件发布后，可在此查看每个版本的说明并下载。请勿将开发测试固件用于正式设备。</p></div>
       <p class="note">使用固件前，请确认型号与版本适用范围，并阅读对应固件说明。</p>
     </section>
   </main>
   <footer><div class="container">© 感为科技 · 感为灰度传感器调试助手</div></footer>
-  <script>
-    const firmwareList = document.getElementById('firmware-list');
-    const firmwareCards = Array.from(firmwareList.querySelectorAll('.firmware-card[data-filename]'));
-    const fileNameOrder = new Intl.Collator('zh-CN', { numeric: true, sensitivity: 'base' });
-    firmwareCards.sort((a, b) => fileNameOrder.compare(a.dataset.filename, b.dataset.filename));
-    firmwareList.replaceChildren(...firmwareCards);
-    document.getElementById('firmware-empty').hidden = firmwareCards.length > 0;
-    for (const card of firmwareCards) {
-      const link = card.querySelector('a[download]');
-      const description = card.querySelector('.firmware-description');
-      if (!link || !description) continue;
-      const notesUrl = new URL(link.href);
-      notesUrl.pathname = notesUrl.pathname.replace(/\.[^/.]+$/, '.txt');
-      fetch(notesUrl, { cache: 'no-store' })
-        .then((response) => { if (!response.ok) throw new Error('说明文件不存在'); return response.text(); })
-        .then((notes) => { description.textContent = notes.trim() || '暂无固件说明。'; })
-        .catch(() => { description.textContent = '暂无固件说明。'; });
-    }
-  </script>
 </body>
 </html>
